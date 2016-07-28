@@ -1,11 +1,23 @@
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-/**
- * Created by charles on 16/7/22.
- */
-/// <reference path="./typings/index.d.ts"/>
-__export(require("./tips/tips.directive"));
-__export(require("./autocomplete/autocomplete.directive"));
+System.register(["./tips/tips.directive", "./autocomplete/autocomplete.directive"], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    function exportStar_1(m) {
+        var exports = {};
+        for(var n in m) {
+            if (n !== "default") exports[n] = m[n];
+        }
+        exports_1(exports);
+    }
+    return {
+        setters:[
+            function (tips_directive_1_1) {
+                exportStar_1(tips_directive_1_1);
+            },
+            function (autocomplete_directive_1_1) {
+                exportStar_1(autocomplete_directive_1_1);
+            }],
+        execute: function() {
+        }
+    }
+});
 //# sourceMappingURL=core.js.map

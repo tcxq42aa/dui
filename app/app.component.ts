@@ -2,11 +2,11 @@
  * Created by charles on 16/7/22.
  */
 import {Component} from "@angular/core";
-// import {TipsDirective} from "ngdui/core";
-// import {AutoCompleteDirective} from "ngdui/core";
+import {TipsDirective} from "dui2/core";
+import {AutoCompleteDirective} from "dui2/core";
 @Component({
     selector: 'my-app',
-    template: `<h3>Hello2</h3><button se-tips toggle="hover" title="hello">dddd</button>
+    template: `<h3>Hello2</h3><button se-tips toggle="hover" title="hello">cccccc</button>
 <input type="autocomplete"
                style="width:300px"
                class="txtNew"
@@ -16,8 +16,8 @@ import {Component} from "@angular/core";
                params="gbCode=310000&aaa=123"
                (selectCallback)="selectCallback1($event)"/>
                <code>观察选中值的变化: {{result1 | json}}</code>
-`
-    // directives: [TipsDirective, AutoCompleteDirective]
+`,
+    directives: [TipsDirective, AutoCompleteDirective]
 })
 export class AppComponent {
 

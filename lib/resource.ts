@@ -60,7 +60,7 @@ export var System = require('systemjs');
         global['@angular/' + pkgName] = exports;
     });
 
-    var moduleName = 'ngdui/', modulePackage = ['core'];
+    var moduleName = 'dui2/', modulePackage = ['core'];
     ;
     modulePackage.forEach(function (pkgName) {
         map[moduleName + pkgName] = host + pkgName + '.js';
