@@ -1,0 +1,118 @@
+.tips {
+    z-index: 999;
+    position: absolute;
+    color: #fff;
+    background: rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 6px 8px;
+    white-space: nowrap;
+}
+
+.tips:after {
+    z-index: 999;
+    display: block;
+    content: ' ';
+    position: absolute;
+}
+.tips.left:after {
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 5px solid rgba(0,0,0,.75);
+    top: 50%;
+    right: -10px;
+    margin-top: -5px;
+}
+.tips.right:after {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-right: 5px solid rgba(0,0,0,.75);
+    top: 50%;
+    left: -10px;
+    margin-top: -5px;
+}
+.tips.bottom:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid rgba(0,0,0,.75);
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+.tips.top:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid rgba(0,0,0,.75);
+    left: 50%;
+    bottom: -10px;
+    margin-left: -5px;
+}
+.tips.leftTop:after,
+.tips.leftBottom:after{
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid rgba(0,0,0,.75);
+    top: 50%;
+    right: -10px;
+    margin-top: -5px;
+}
+.tips.rightTop:after,
+.tips.rightBottom:after{
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid rgba(0,0,0,.75);
+    top: 50%;
+    left: -10px;
+    margin-top: -5px;
+}
+.tips[class*="leftBottom"]:after,
+.tips[class*="rightBottom"]:after{
+    top: auto;
+    bottom: 10px;
+    margin-top: 0;
+}
+.tips[class*="leftTop"]:after,
+.tips[class*="rightTop"]:after{
+    top: 10px;
+    margin-top: 0;
+}
+
+.tips.topLeft:after,
+.tips.topRight:after{
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid rgba(0,0,0,.75);
+}
+.tips[class*="topLeft"]:after {
+    top: auto;
+    bottom: -10px;
+    left: 10px;
+}
+.tips[class*="topRight"]:after{
+    top: auto;
+    left: auto;
+    bottom: -10px;
+    right: 10px;
+}
+.tips.bottomLeft:after,
+.tips.bottomRight:after{
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid rgba(0,0,0,.75);
+}
+.tips[class*="bottomLeft"]:after {
+    left: 10px;
+    top: -10px;
+}
+.tips[class*="bottomRight"]:after{
+    top: -10px;
+    left: auto;
+    right: 10px;
+}
