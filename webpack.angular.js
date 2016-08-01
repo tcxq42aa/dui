@@ -12,7 +12,6 @@ module.exports = webpackMerge(commonConfig, {
         filename: "[name].js",
         chunkFilename: "[id].js",
         path: './dist/lib',
-        library: '[name]',
         libraryTarget: 'umd'
     }
 });

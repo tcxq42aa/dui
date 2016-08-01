@@ -10,9 +10,9 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "build:angular": "NODE_ENV=prod rimraf ./dist/lib && webpack --config ./webpack.angular.js --progress --colors",
-    "build:component": "NODE_ENV=prod rimraf ./dist/component && webpack --config ./webpack.component.js --progress --colors",
-    "generate:d.ts": "tsc -d -p ./component/ --outDir ./component/definition"
+    "build:angular": "NODE_ENV=prod rimraf ./dist/lib && NODE_ENV=prod webpack --config ./webpack.angular.js --progress --colors",
+    "build:component": "rimraf ./dist/component && NODE_ENV=prod webpack --config ./webpack.component.js --progress --colors",
+    "generate:d.ts": "tsc -d -p ./component/src --outDir ./component/definition"
   },
   "author": "",
   "license": "ISC",
@@ -37,7 +37,6 @@
     "gulp": "^3.9.1",
     "json-loader": "^0.5.4",
     "lite-server": "^2.2.0",
-    "ngdui": "^0.0.7",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.3",
     "rimraf": "^2.5.2",

@@ -6,13 +6,12 @@ var commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        'core': ["./component/core"],
+        'core': ["./component/src/core"],
     },
     output: {
         filename: "[name].js",
         chunkFilename: "[id].js",
         path: './dist/component',
-        library: '[name]',
         libraryTarget: 'umd',
     },
     externals: [

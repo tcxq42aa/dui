@@ -51,8 +51,9 @@ export let System = require('systemjs/dist/system.src.js');
     var ngModule = System.newModule(exports);
     ngPackageNames.forEach(function (pkgName) {
         System.set('@angular/' + pkgName, ngModule);
-        global['@angular/' + pkgName] = exports;
+        // global['@angular/' + pkgName] = exports;
     });
+    System.set('angular2-in-memory-web-api', ngModule);
 
     var moduleName = 'dui2/', modulePackage = ['core'];
     ;
