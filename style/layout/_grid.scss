@@ -1,0 +1,26 @@
+.row:before,.row:after {
+  display: table;
+  content: " ";
+
+}
+
+.row:after {
+  clear: both
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: $i / 12 * 100%;
+  }
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+@for $i from 1 through 12 {
+  .expend-#{$i} {
+    flex-grow: $i;
+  }
+}
