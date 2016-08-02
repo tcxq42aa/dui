@@ -96,6 +96,18 @@
 .row:after {
   clear: both; }
 
+.row > * {
+  align-self: flex-start; }
+
+.row > .top {
+  align-self: flex-start; }
+
+.row > .bottom {
+  align-self: flex-end; }
+
+.row > .center {
+  align-self: center; }
+
 .col-1 {
   width: 8.33333%; }
 

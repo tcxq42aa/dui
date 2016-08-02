@@ -1,4 +1,4 @@
-.row:before,.row:after {
+.row:before, .row:after {
   display: table;
   content: " ";
 
@@ -6,6 +6,22 @@
 
 .row:after {
   clear: both
+}
+
+.row > * {
+  align-self: flex-start;
+}
+
+.row > .top {
+  align-self: flex-start;
+}
+
+.row > .bottom {
+  align-self: flex-end;
+}
+
+.row > .center {
+  align-self: center;
 }
 
 @for $i from 1 through 12 {
@@ -19,6 +35,7 @@
   display: flex;
   align-items: center;
 }
+
 @for $i from 1 through 12 {
   .expend-#{$i} {
     flex-grow: $i;
