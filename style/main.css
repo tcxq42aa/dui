@@ -1,4 +1,24 @@
+@charset "UTF-8";
 @import url(vendor/normalize.css);
+/* headings
+*
+*  标题样式
+*/
+/* headings end
+-----------------------------------------------*/
+html {
+  font-size: 14px; }
+
+body {
+  font-family: "Microsoft YaHei", 微软雅黑, 宋体;
+  line-height: 1.5; }
+
+/* headings
+*
+*  标题样式
+*/
+/* headings end
+-----------------------------------------------*/
 .btn, .btn-positive, .btn-positive-inverse, .btn-danger, .btn-danger-inverse, .btn-warning, .btn-warning-inverse, .btn-negative, .btn-negative-inverse {
   box-sizing: border-box;
   min-width: 90px;
@@ -88,6 +108,45 @@
 .btn-negative-inverse.disabled {
   color: rgba(193, 193, 193, 0.75);
   border-color: rgba(193, 193, 193, 0.75); }
+
+/* headings
+*
+*  标题样式
+*/
+/* headings end
+-----------------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Microsoft YaHei", 微软雅黑, 宋体;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 0; }
+
+h1, .h1 {
+  font-size: 2.5rem; }
+
+h2, .h2 {
+  font-size: 2rem; }
+
+h3, .h3 {
+  font-size: 1.75rem; }
+
+h4, .h4 {
+  font-size: 1.5rem; }
+
+h5, .h5 {
+  font-size: 1.25rem; }
+
+h6, .h6 {
+  font-size: 1rem; }
 
 .row:before, .row:after {
   display: table;
