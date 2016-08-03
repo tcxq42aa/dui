@@ -44,10 +44,24 @@ $headings-color:             inherit !default;
 //主色
 $main-color: #39ac6a !default;
 
+//正文
+$text-body-color: #333 !default;
+
+//input
+$input-placeholder-color: #d8d8d8 !default;
+
+//提醒
+$warn-color: #f5a623 !default;
+
+//警示
+$warn-serious-color: #ea5555 !default;
 
 //link
 $link-color: #0088cc !default;
 $link-visit-color: red !default;
-
+$link-hover-color: darken($link-color, 15%) !default;
 
 // 颜色 end
+
+
+$cursor-disabled:                not-allowed !default;

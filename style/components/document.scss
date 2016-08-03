@@ -8,3 +8,28 @@ body {
   font-family: $font-family-base;
   line-height: $line-height;
 }
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &:visited:hover{
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:visited{
+    color: $link-visit-color;
+  }
+}
+
+/*正文颜色*/
+p, .text-body{
+  color: $text-body-color;
+}
+
+/*input-placeholder颜色*/
+input::-webkit-input-placeholder{
+  color:#d8d8d8;
+}
