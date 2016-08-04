@@ -1,0 +1,68 @@
+@import "../utils/mixins/mixins";
+@import "../utils/mixins/hover-focus";
+
+
+.btn2 {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  border: 1px solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, 2px);
+  @include transition(all .2s ease-in-out);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
+    }
+  }
+
+  &:hover, &.hover, &:focus, &.focus{
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &:disabled{
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled{
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+.btn-primary {
+  @include button-variant(#fff, #39ac6a, transparent);
+}
+.btn-secondary {
+  @include button-variant(#fff, #ea5555, transparent);
+}
+.btn-info {
+  @include button-variant(#fff, #f5ba4e, transparent);
+}
+.btn-success {
+  @include button-variant(#39ac6a, transparent, #36ac6a);
+}
+.btn-warning {
+  @include button-variant(#414141, #fff, #c2c2c2);
+}

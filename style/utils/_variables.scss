@@ -46,7 +46,7 @@ $main-color: #39ac6a !default;
 
 //正文
 $text-body-color: #333 !default;
-
+$text-label-color: #999 !default;
 //input
 $input-placeholder-color: #d8d8d8 !default;
 
@@ -64,4 +64,10 @@ $link-hover-color: darken($link-color, 15%) !default;
 // 颜色 end
 
 
-$cursor-disabled:                not-allowed !default;
+$cursor-disabled:  not-allowed !default;
+$btn-disabled-opacity:  .95 !default;
+
+//按钮
+$btn-padding-x:                  1rem;
+$btn-padding-y:                  .375rem;
+$btn-font-weight:                normal !default;

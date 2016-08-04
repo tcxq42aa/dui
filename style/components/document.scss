@@ -29,6 +29,9 @@ p, .text-body{
   color: $text-body-color;
 }
 
+label{
+  color: $text-label-color;
+}
 /*input-placeholder颜色*/
 input::-webkit-input-placeholder{
   color:#d8d8d8;
