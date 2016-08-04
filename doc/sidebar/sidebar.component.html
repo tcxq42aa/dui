@@ -1,0 +1,11 @@
+<ul class="sidebar" *ngIf="data">
+    <li *ngFor="let item of data.values()">
+        <a href="#{{item.anchor}}" (click)="clickAnchor(item.anchor)" [ngClass]="{active: anchor==item.anchor}">{{item.text}}</a>
+        <ul *ngIf="item.children">
+            <li *ngFor="let childItem of item.children">
+                <a href="#{{childItem.anchor}}" (click)="clickSubAnchor(childItem.anchor, item.anchor)"
+                   [ngClass]="{active: subAnchor==childItem.anchor}">{{childItem.text}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>

@@ -112,8 +112,8 @@ var TipsComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'se-tips',
-            template: require('./tips.directive.html'),
-            styles: [require('./tips.directive.css')]
+            templateUrl: 'tips.directive.html',
+            styleUrls: ['tips.directive.css']
         }), 
         __metadata('design:paramtypes', [core_1.Injector, core_1.ElementRef, core_1.ChangeDetectorRef])
     ], TipsComponent);
