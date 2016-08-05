@@ -1,0 +1,37 @@
+header {
+  color: #39AC6A; }
+  header:before, header:after {
+    content: " ";
+    display: table; }
+  header:after {
+    clear: both; }
+  header .logo {
+    font-size: 20px; }
+  header .logo, header .nav {
+    float: left;
+    margin-right: 30px; }
+  header .nav-right {
+    float: right; }
+  header .nav a, header .nav-right a {
+    font-size: 14px;
+    float: left;
+    padding: 0 20px;
+    -webkit-transition: background-color .15s linear;
+    -moz-transition: background-color .15s linear;
+    -ms-transition: background-color .15s linear;
+    -o-transition: background-color .15s linear;
+    transition: background-color .15s linear; }
+    header .nav a:hover, header .nav a.active, header .nav-right a:hover, header .nav-right a.active {
+      background-color: #ebf9f1; }
+  header .nav:before, header .nav:after, header .nav-right:before, header .nav-right:after {
+    content: " ";
+    display: table; }
+  header .nav:after, header .nav-right:after {
+    clear: both; }
+  header a {
+    text-decoration: none;
+    color: #39AC6A;
+    height: 46px;
+    line-height: 46px; }
+
+/*# sourceMappingURL=app.component.css.map */

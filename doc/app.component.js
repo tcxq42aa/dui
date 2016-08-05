@@ -12,8 +12,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by charles on 16/7/22.
  */
 var core_1 = require("@angular/core");
-var core_2 = require("dui2/core");
-var core_3 = require("dui2/core");
+var router_1 = require("@angular/router");
+var sidebar_component_1 = require("./sidebar/sidebar.component");
+var sidebar_directive_1 = require("./sidebar/sidebar.directive");
 var AppComponent = (function () {
     function AppComponent() {
         this.result1 = {};
@@ -23,9 +24,11 @@ var AppComponent = (function () {
     };
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            template: "<h3>Hello2</h3><button se-tips toggle=\"hover\" title=\"hello\">cccccc</button>\n<input type=\"autocomplete\"\n               style=\"width:300px\"\n               class=\"txtNew\"\n               url=\"http://api.route.dooioo.com/loupan/search/v1/resblock/autoSearch\"\n               optionKey=\"name\"\n               placeholder=\"\u8BF7\u8F93\u5165\u5173\u952E\u5B57\"\n               params=\"gbCode=310000&aaa=123\"\n               (selectCallback)=\"selectCallback1($event)\"/>\n               <code>\u89C2\u5BDF\u9009\u4E2D\u503C\u7684\u53D8\u5316: {{result1 | json}}</code>\n",
-            directives: [core_2.TipsDirective, core_3.AutoCompleteDirective]
+            templateUrl: 'app.component.html',
+            styleUrls: ['app.component.css'],
+            directives: [router_1.ROUTER_DIRECTIVES, sidebar_component_1.SidebarComponent, sidebar_directive_1.SidebarDirective]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

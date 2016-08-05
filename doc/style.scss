@@ -1,0 +1,49 @@
+@import "../style/utils/variables";
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+.container {
+  width: 1280px;
+  margin: auto;
+}
+.summary {
+  background-color: lighten($color_positive, 10%);
+  padding: 20px;
+  color: #fff;
+  & p {
+    color: #fff;
+  }
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+.page-content {
+  line-height: 1.8;
+  font-size: 16px;
+}
+.seg {
+  display: block;
+  margin: 5px 0;
+}
+section {
+  padding: 0 10px;
+}
+#layout > .row + .row {
+  margin-top: 10px;
+}
+#layout > .row > div {
+  text-align: center;
+  padding: 11px;
+  border: 1px solid #aaa;
+  &+div {
+    border-left-color: transparent;
+    border-left-width: 0;
+  }
+}
+
+#button-content a {
+  margin-top: 10px;
+}

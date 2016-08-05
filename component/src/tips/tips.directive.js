@@ -13,6 +13,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+require("./tips.directive.css");
 var TipsComponent = (function () {
     function TipsComponent(injector, _elementRef, ref) {
         this._elementRef = _elementRef;
@@ -112,8 +113,7 @@ var TipsComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'se-tips',
-            template: require('./tips.directive.html'),
-            styles: [require('./tips.directive.css')]
+            template: require('./tips.directive.html')
         }), 
         __metadata('design:paramtypes', [core_1.Injector, core_1.ElementRef, core_1.ChangeDetectorRef])
     ], TipsComponent);

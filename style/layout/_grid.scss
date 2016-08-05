@@ -1,29 +1,3 @@
-.row:before, .row:after {
-  display: table;
-  content: " ";
-
-}
-
-.row:after {
-  clear: both
-}
-
-.row > * {
-  align-self: flex-start;
-}
-
-.row > .top {
-  align-self: flex-start;
-}
-
-.row > .bottom {
-  align-self: flex-end;
-}
-
-.row > .center {
-  align-self: center;
-}
-
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: $i / 12 * 100%;
@@ -34,6 +8,18 @@
   display: -webkit-flex;
   display: flex;
   align-items: center;
+  & > *, & > .top {
+    align-self: flex-start;
+  }
+  & > .bottom {
+    align-self: flex-end;
+  }
+  & > .center {
+    align-self: center;
+  }
+  .fill-y > *, & > .fill-y {
+    align-self: stretch;
+  }
 }
 
 @for $i from 1 through 12 {

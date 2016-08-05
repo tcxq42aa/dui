@@ -20,11 +20,12 @@ import {
 } from "@angular/core";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 
+import "./tips.directive.css";
+
 @Component({
     moduleId: module.id,
     selector: 'se-tips',
-    template: require('./tips.directive.html'),
-    styles: [require('./tips.directive.css')]
+    template: require('./tips.directive.html')
 })
 class TipsComponent implements AfterViewInit {
 
