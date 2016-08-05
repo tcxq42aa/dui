@@ -3,11 +3,11 @@
  */
 import {ViewChildren, ViewChild, QueryList} from "@angular/core";
 import {SidebarDirective} from "./sidebar/sidebar.directive";
-import {PageComponent} from "./page/page.component";
+import {DocumentComponent} from "./document/document.component";
 
 export class BaseComponent {
     @ViewChildren(SidebarDirective) sidebarsItems:QueryList<SidebarDirective>;
-    @ViewChild(PageComponent) pageComponent:PageComponent;
+    @ViewChild(DocumentComponent) documentComponent:DocumentComponent;
 
     ngAfterViewInit() {
         let data = new Map<string, any>();
@@ -23,6 +23,6 @@ export class BaseComponent {
                 data.set(meta.anchor, meta);
             }
         });
-        this.pageComponent.setData(data);
+        this.documentComponent.setData(data);
     }
 }

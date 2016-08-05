@@ -2,10 +2,10 @@
  * Created by charles on 16/8/3.
  */
 import { provideRouter, RouterConfig }  from '@angular/router';
-import {StartComponent} from "./start/start.component";
-import {CssComponent} from "./css/css.component";
-import {ComponentsComponent} from "./components/components.component";
-import {PluginsComponent} from "./plugins/plugins.component";
+import {StartComponent} from "./page/start/start.component";
+import {CssComponent} from "./page/css/css.component";
+import {ComponentsComponent} from "./page/components/components.component";
+import {PluginsComponent} from "./page/plugins/plugins.component";
 
 const routes: RouterConfig = [
     {

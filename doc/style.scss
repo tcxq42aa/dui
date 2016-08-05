@@ -3,6 +3,13 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
 }
+pre {
+  position: relative;
+  white-space: pre-line;
+  & > code {
+    white-space: pre;
+  }
+}
 .container {
   width: 1280px;
   margin: auto;

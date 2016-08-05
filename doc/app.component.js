@@ -13,8 +13,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var sidebar_component_1 = require("./sidebar/sidebar.component");
-var sidebar_directive_1 = require("./sidebar/sidebar.directive");
+var sidebar_component_1 = require("./component/sidebar/sidebar.component");
+var sidebar_directive_1 = require("./component/sidebar/sidebar.directive");
 var AppComponent = (function () {
     function AppComponent() {
         this.result1 = {};
