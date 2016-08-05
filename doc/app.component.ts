@@ -3,8 +3,8 @@
  */
 import {Component} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
-import {SidebarComponent} from "./sidebar/sidebar.component";
-import {SidebarDirective} from "./sidebar/sidebar.directive";
+import {SidebarComponent} from "./component/sidebar/sidebar.component";
+import {SidebarDirective} from "./component/sidebar/sidebar.directive";
 @Component({
     moduleId: module.id,
     selector: 'my-app',

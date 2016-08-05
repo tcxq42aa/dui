@@ -3,10 +3,10 @@
  * Created by charles on 16/8/3.
  */
 var router_1 = require('@angular/router');
-var start_component_1 = require("./start/start.component");
-var css_component_1 = require("./css/css.component");
-var components_component_1 = require("./components/components.component");
-var plugins_component_1 = require("./plugins/plugins.component");
+var start_component_1 = require("./page/start/start.component");
+var css_component_1 = require("./page/css/css.component");
+var components_component_1 = require("./page/components/components.component");
+var plugins_component_1 = require("./page/plugins/plugins.component");
 var routes = [
     {
         path: 'start',

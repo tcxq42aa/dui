@@ -13,29 +13,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require("@angular/core");
 var sidebar_component_1 = require("../sidebar/sidebar.component");
-var PageComponent = (function () {
-    function PageComponent(cdr) {
+var DocumentComponent = (function () {
+    function DocumentComponent(cdr) {
         this.cdr = cdr;
     }
-    PageComponent.prototype.setData = function (data) {
+    DocumentComponent.prototype.setData = function (data) {
         this.data = data;
         this.cdr.detectChanges();
     };
     __decorate([
         core_1.ViewChild(sidebar_component_1.SidebarComponent), 
         __metadata('design:type', sidebar_component_1.SidebarComponent)
-    ], PageComponent.prototype, "sidebar", void 0);
-    PageComponent = __decorate([
+    ], DocumentComponent.prototype, "sidebar", void 0);
+    DocumentComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'doc-page',
-            templateUrl: 'page.component.html',
-            styleUrls: ['page.component.css'],
+            templateUrl: 'document.component.html',
+            styleUrls: ['document.component.css'],
             directives: [sidebar_component_1.SidebarComponent]
         }), 
         __metadata('design:paramtypes', [core_1.ChangeDetectorRef])
-    ], PageComponent);
-    return PageComponent;
+    ], DocumentComponent);
+    return DocumentComponent;
 }());
-exports.PageComponent = PageComponent;
-//# sourceMappingURL=page.component.js.map
+exports.DocumentComponent = DocumentComponent;
+//# sourceMappingURL=document.component.js.map

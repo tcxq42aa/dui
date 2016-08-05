@@ -17,9 +17,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by charles on 16/8/3.
  */
 var core_1 = require("@angular/core");
-var base_component_1 = require("../base.component");
-var sidebar_directive_1 = require("../sidebar/sidebar.directive");
-var page_component_1 = require("../page/page.component");
+var base_component_1 = require("../../component/base.component");
+var sidebar_directive_1 = require("../../component/sidebar/sidebar.directive");
+var document_component_1 = require("../../component/document/document.component");
 var ComponentsComponent = (function (_super) {
     __extends(ComponentsComponent, _super);
     function ComponentsComponent() {
@@ -31,7 +31,7 @@ var ComponentsComponent = (function (_super) {
             selector: 'page-components',
             templateUrl: 'components.component.html',
             styleUrls: ['components.component.css'],
-            directives: [page_component_1.PageComponent, sidebar_directive_1.SidebarDirective]
+            directives: [document_component_1.DocumentComponent, sidebar_directive_1.SidebarDirective]
         }), 
         __metadata('design:paramtypes', [])
     ], ComponentsComponent);

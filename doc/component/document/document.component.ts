@@ -6,11 +6,11 @@ import {SidebarComponent} from "../sidebar/sidebar.component";
 @Component({
     moduleId: module.id,
     selector: 'doc-page',
-    templateUrl: 'page.component.html',
-    styleUrls: ['page.component.css'],
+    templateUrl: 'document.component.html',
+    styleUrls: ['document.component.css'],
     directives: [SidebarComponent]
 })
-export class PageComponent {
+export class DocumentComponent {
     @ViewChild(SidebarComponent) sidebar:SidebarComponent;
     data:Map<string, any>;
 

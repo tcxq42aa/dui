@@ -17,25 +17,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by charles on 16/8/3.
  */
 var core_1 = require("@angular/core");
-var sidebar_directive_1 = require("../sidebar/sidebar.directive");
-var base_component_1 = require("../base.component");
-var page_component_1 = require("../page/page.component");
-var StartComponent = (function (_super) {
-    __extends(StartComponent, _super);
-    function StartComponent() {
+var sidebar_directive_1 = require("../../component/sidebar/sidebar.directive");
+var document_component_1 = require("../../component/document/document.component");
+var base_component_1 = require("../../component/base.component");
+var CssComponent = (function (_super) {
+    __extends(CssComponent, _super);
+    function CssComponent() {
         _super.apply(this, arguments);
     }
-    StartComponent = __decorate([
+    CssComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'page-start',
-            templateUrl: 'start.component.html',
-            styleUrls: ['start.component.css'],
-            directives: [page_component_1.PageComponent, sidebar_directive_1.SidebarDirective]
+            selector: 'page-css',
+            templateUrl: 'css.component.html',
+            styleUrls: ['css.component.css'],
+            directives: [document_component_1.DocumentComponent, sidebar_directive_1.SidebarDirective]
         }), 
         __metadata('design:paramtypes', [])
-    ], StartComponent);
-    return StartComponent;
+    ], CssComponent);
+    return CssComponent;
 }(base_component_1.BaseComponent));
-exports.StartComponent = StartComponent;
-//# sourceMappingURL=start.component.js.map
+exports.CssComponent = CssComponent;
+//# sourceMappingURL=css.component.js.map
