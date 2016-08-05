@@ -34,4 +34,7 @@ section {
     border-left-color: transparent;
     border-left-width: 0; }
 
+#button-content a {
+  margin-top: 10px; }
+
 /*# sourceMappingURL=style.css.map */
