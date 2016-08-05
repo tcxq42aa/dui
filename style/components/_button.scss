@@ -1,52 +1,52 @@
-@import "../utils/variables";
-
-$mask: rgba(0, 0, 0, .7);
-$mask_reverse: rgba(255, 255, 255, .5);
-.btn {
-  box-sizing: border-box;
-  min-width: 90px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 32px;
-  height: 32px;
-  -webkit-user-select: none;
-  outline: none;
-  cursor: pointer;
-  &:not(.disabled):active,&:not(.disabled).active {
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  &.disabled,&:disabled {
-    cursor: not-allowed;
-  }
-}
-@each $buttonType, $color in
-                (positive, $color_positive),
-                (danger, $color_danger),
-                (warning, $color_warning),
-                (negative, $color_negative){
-  .btn-#{$buttonType} {
-    @extend .btn;
-    background-color: $color;
-  }
-  .btn-#{$buttonType}:active,.btn-#{$buttonType}.active,.btn-#{$buttonType}:hover,.btn-#{$buttonType}.hover {
-    background-color: mix($color, $mask, 80);
-  }
-
-  .btn-#{$buttonType}.disabled, .btn-#{$buttonType}[disabled] {
-    background-color: mix($color, $mask_reverse);
-  }
-
-  .btn-#{$buttonType}-inverse {
-    @extend .btn;
-    color: $color;
-    background-color: transparent;
-    border: 1px solid $color;
-  }
-  .btn-#{$buttonType}-inverse.disabled {
-    color: mix($color, $mask_reverse);
-    border-color: mix($color, $mask_reverse);
-  }
-}
+//@import "../utils/variables";
+//
+//$mask: rgba(0, 0, 0, .7);
+//$mask_reverse: rgba(255, 255, 255, .5);
+//.btn {
+//  box-sizing: border-box;
+//  min-width: 90px;
+//  text-align: center;
+//  display: inline-block;
+//  border-radius: 2px;
+//  color: #fff;
+//  font-size: 12px;
+//  line-height: 32px;
+//  height: 32px;
+//  -webkit-user-select: none;
+//  outline: none;
+//  cursor: pointer;
+//  &:not(.disabled):active,&:not(.disabled).active {
+//    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+//  }
+//  &.disabled,&:disabled {
+//    cursor: not-allowed;
+//  }
+//}
+//@each $buttonType, $color in
+//                (positive, $color_positive),
+//                (danger, $color_danger),
+//                (warning, $color_warning),
+//                (negative, $color_negative){
+//  .btn-#{$buttonType} {
+//    @extend .btn;
+//    background-color: $color;
+//  }
+//  .btn-#{$buttonType}:active,.btn-#{$buttonType}.active,.btn-#{$buttonType}:hover,.btn-#{$buttonType}.hover {
+//    background-color: mix($color, $mask, 80);
+//  }
+//
+//  .btn-#{$buttonType}.disabled, .btn-#{$buttonType}[disabled] {
+//    background-color: mix($color, $mask_reverse);
+//  }
+//
+//  .btn-#{$buttonType}-inverse {
+//    @extend .btn;
+//    color: $color;
+//    background-color: transparent;
+//    border: 1px solid $color;
+//  }
+//  .btn-#{$buttonType}-inverse.disabled {
+//    color: mix($color, $mask_reverse);
+//    border-color: mix($color, $mask_reverse);
+//  }
+//}
