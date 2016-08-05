@@ -1,5 +1,6 @@
 @import "../style/mixins/clearfix";
 @import "../style/utils/variables";
+
 header {
     color: $color_positive;
     @include clearfix;
