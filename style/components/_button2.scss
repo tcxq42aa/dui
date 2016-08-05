@@ -3,6 +3,7 @@
 
 
 .btn2 {
+  box-sizing: border-box;
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -12,8 +13,9 @@
   -webkit-user-select: none;
   border: 1px solid transparent;
   text-decoration: none;
+  min-width: 8rem;
 
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, 2px);
+  @include button-size($btn-padding-y, 0, $font-size-base, $line-height, 2px);
   @include transition(all .2s ease-in-out);
   @include button-variant(#fff, #39ac6a, transparent);
 

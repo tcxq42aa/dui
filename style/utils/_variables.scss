@@ -8,7 +8,7 @@ $color_normal: #F5BA4E;
 $font-family-heiti: "Microsoft YaHei",微软雅黑,宋体 !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base: $font-family-heiti !default;
-$font-size-root:             14px !default;
+$font-size-root:             12px !default;
 
 
 $font-size-base:             1rem !default;
@@ -70,6 +70,6 @@ $cursor-disabled:  not-allowed !default;
 $btn-disabled-opacity:  .95 !default;
 
 //按钮
-$btn-padding-x:                  1rem;
-$btn-padding-y:                  .375rem;
+$btn-padding-x:                  .7em;
+$btn-padding-y:                  .7em;
 $btn-font-weight:                normal !default;
