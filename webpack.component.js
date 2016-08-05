@@ -6,7 +6,7 @@ var commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        'core': ["./component/src/core"],
+        'core': ["./src/component/src/core"],
     },
     output: {
         filename: "[name].js",
