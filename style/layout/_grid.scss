@@ -7,8 +7,8 @@
 .row {
   display: -webkit-flex;
   display: flex;
-  align-items: center;
-  & > *, & > .top {
+  align-items: flex-start;
+  & > .top {
     align-self: flex-start;
   }
   & > .bottom {
