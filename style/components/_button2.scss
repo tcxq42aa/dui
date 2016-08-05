@@ -5,7 +5,6 @@
 .btn {
   display: inline-block;
   box-sizing: border-box;
-  min-width: 8rem;
   border: 1px solid transparent;
   font-weight: normal;
   text-align: center;
@@ -43,26 +42,32 @@
 
 
 // Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled{
-  pointer-events: none;
-}
+
 
 //
 // Alternate buttons
 //
 
-.btn-primary {
+.btn-positive {
   @include button-variant(#fff, #39ac6a, transparent);
+  @include button-min-size($btn-min-width-md);
 }
-.btn-secondary {
+.btn-danger {
   @include button-variant(#fff, #ea5555, transparent);
-}
-.btn-info {
-  @include button-variant(#fff, #f5ba4e, transparent);
-}
-.btn-success {
-  @include button-variant(#39ac6a, transparent, #36ac6a);
+  @include button-min-size($btn-min-width-md);
 }
 .btn-warning {
+  @include button-variant(#fff, #f5ba4e, transparent);
+  @include button-min-size($btn-min-width-md);
+}
+.btn-positive-inverse {
+  @include button-variant(#39ac6a, transparent, #36ac6a);
+  @include button-min-size($btn-min-width-md);
+}
+.btn-positive-white {
+  @include button-variant(#fff, transparent, #fff);
+  @include button-min-size($btn-min-width-md);
+}
+.s {
   @include button-variant(#414141, #fff, #c2c2c2);
 }

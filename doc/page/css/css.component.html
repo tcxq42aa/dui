@@ -35,9 +35,22 @@
                 <div class="col-1 expend-2">col-1 expend-2</div>
                 <div class="col-1 expend-1">col-1 expend-1</div>
             </div>
+            <div class="row">
+                <div class="col-1">col-1</div>
+                <div class="col-1 expend-2">
+                    <input value="aaa">
+                </div>
+                <div class="col-1 expend-1">col-1 expend-1</div>
+            </div>
+            <div class="row" style="justify-content: space-around; ">
+                <input class="center" type="radio">
+                <input class="col-2 center" value="a">
+                <input class="col-2 center" value="a">
+                <input class="col-2 center" value="a">
+            </div>
         </div>
         <div>
-            <pre>
+      <pre>
                 <code doc-highlight="html" se-copy>
     &lt;div class="row"&gt;
         &lt;div class="col-8">col-8&lt;/div&gt;
@@ -46,7 +59,6 @@
                 </code>
             </pre>
         </div>
-
         <h1 id="title" doc-sidebar class="page-header">标题</h1>
         <h1>标题</h1>
         <h2>标题</h2>
@@ -54,7 +66,7 @@
         <h4>标题</h4>
         <h5>标题</h5>
         <div>
-            <pre>
+      <pre>
                 <code doc-highlight="html" se-copy>
     &lt;h1&gt;标题&lt;/h1&gt;
     &lt;h2&gt;标题&lt;/h2&gt;
@@ -64,76 +76,113 @@
                 </code>
             </pre>
         </div>
-
         <h1 id="paragraph" doc-sidebar class="page-header">段落</h1>
         <p>这是普通文本</p>
         <div>
-            <pre>
+      <pre>
                 <code doc-highlight="html" se-copy>
     &lt;p&gt;这是普通文本&lt;/p&gt;
                 </code>
             </pre>
         </div>
-
         <h1 id="button" doc-sidebar class="page-header">按钮</h1>
         <div id="button-content" class="row">
-            <div class="col-1 expend-1">
-                <a class="btn-positive disabled">disabled</a>
-                <a class="btn-positive">normal</a>
-                <a class="btn-positive hover">hover</a>
-                <a class="btn-positive active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-danger disabled">disabled</a>
-                <a class="btn-danger">normal</a>
-                <a class="btn-danger hover">hover</a>
-                <a class="btn-danger active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-warning disabled">disabled</a>
-                <a class="btn-warning">normal</a>
-                <a class="btn-warning hover">hover</a>
-                <a class="btn-warning active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-negative disabled">disabled</a>
-                <a class="btn-negative">normal</a>
-                <a class="btn-negative hover">hover</a>
-                <a class="btn-negative active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-positive-inverse disabled">disabled</a>
-                <a class="btn-positive-inverse">normal</a>
-                <a class="btn-positive-inverse hover">hover</a>
-                <a class="btn-positive-inverse active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-danger-inverse disabled">disabled</a>
-                <a class="btn-danger-inverse">normal</a>
-                <a class="btn-danger-inverse hover">hover</a>
-                <a class="btn-danger-inverse active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-warning-inverse disabled">disabled</a>
-                <a class="btn-warning-inverse">normal</a>
-                <a class="btn-warning-inverse hover">hover</a>
-                <a class="btn-warning-inverse active">active</a>
-            </div>
-            <div class="col-1 expend-1">
-                <a class="btn-negative-inverse disabled">disabled</a>
-                <a class="btn-negative-inverse">normal</a>
-                <a class="btn-negative-inverse hover">hover</a>
-                <a class="btn-negative-inverse active">active</a>
+            <div class="col-12">
+                <p>
+                    <a class="btn  disabled">Click Me</a>
+                    <a class="btn ">Click Me</a>
+                </p>
+                <p>
+                    <a class="btn btn-positive disabled">Click Me</a>
+                    <a class="btn btn-positive">Click Me</a>
+                </p>
+                <p>
+                    <a class="btn btn-danger disabled">Click Me</a>
+                    <a class="btn btn-danger ">Click Me</a>
+                </p>
+                <p>
+                    <a class="btn btn-warning disabled">Click Me</a>
+                    <a class="btn btn-warning ">Click Me</a>
+                </p>
+                <p>
+                </p>
+                <p>
+                    <a class="btn btn-positive-inverse disabled">Click Me</a>
+                    <a class="btn btn-positive-inverse ">Click Me</a>
+                </p>
             </div>
         </div>
         <div>
-            <pre>
+      <pre>
                 <code doc-highlight="html" se-copy>
-    &lt;a class="btn-positive"&gt;normal&lt;/a&gt;
-    &lt;a class="btn-positive-inverse"&gt;normal&lt;/a&gt;
+&lt;a class="btn disabled"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-positive disabled"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-positive"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-danger disabled"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-danger"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-warning disabled"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-warning"&gt;normal&lt;/a&gt;
+&lt;a class="btn btn-positive-inverse disabled"&gt;Click Me&lt;/a&gt;
+&lt;a class="btn btn-positive-inverse"&gt;normal&lt;/a&gt;
                 </code>
             </pre>
         </div>
-
     </div>
 </doc-page>
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-positive disabled">disabled</a>-->
+<!--<a class="btn-positive">normal</a>-->
+<!--<a class="btn-positive hover">hover</a>-->
+<!--<a class="btn-positive active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-danger disabled">disabled</a>-->
+<!--<a class="btn-danger">normal</a>-->
+<!--<a class="btn-danger hover">hover</a>-->
+<!--<a class="btn-danger active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-warning disabled">disabled</a>-->
+<!--<a class="btn-warning">normal</a>-->
+<!--<a class="btn-warning hover">hover</a>-->
+<!--<a class="btn-warning active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-negative disabled">disabled</a>-->
+<!--<a class="btn-negative">normal</a>-->
+<!--<a class="btn-negative hover">hover</a>-->
+<!--<a class="btn-negative active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-positive-inverse disabled">disabled</a>-->
+<!--<a class="btn-positive-inverse">normal</a>-->
+<!--<a class="btn-positive-inverse hover">hover</a>-->
+<!--<a class="btn-positive-inverse active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-danger-inverse disabled">disabled</a>-->
+<!--<a class="btn-danger-inverse">normal</a>-->
+<!--<a class="btn-danger-inverse hover">hover</a>-->
+<!--<a class="btn-danger-inverse active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-warning-inverse disabled">disabled</a>-->
+<!--<a class="btn-warning-inverse">normal</a>-->
+<!--<a class="btn-warning-inverse hover">hover</a>-->
+<!--<a class="btn-warning-inverse active">active</a>-->
+<!--</div>-->
+<!--<div class="col-1 expend-1">-->
+<!--<a class="btn-negative-inverse disabled">disabled</a>-->
+<!--<a class="btn-negative-inverse">normal</a>-->
+<!--<a class="btn-negative-inverse hover">hover</a>-->
+<!--<a class="btn-negative-inverse active">active</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div>-->
+<!--<pre>-->
+<!--<code doc-highlight="html" se-copy>-->
+<!--&lt;a class="btn-positive"&gt;normal&lt;/a&gt;-->
+<!--&lt;a class="btn-positive-inverse"&gt;normal&lt;/a&gt;-->
+<!--</code>-->
+<!--</pre>-->

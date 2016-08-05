@@ -6,6 +6,10 @@
   line-height: $line-height;
   border-radius: $border-radius;
 }
+
+@mixin button-min-size($width){
+  min-width: $width;
+}
 // Button variants
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
