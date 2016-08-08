@@ -6,12 +6,12 @@ var commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        angular: ["./src/lib/angular"],
+        angular: ["./src/dui/lib/angular"],
     },
     output: {
         filename: "[name].js",
         chunkFilename: "[id].js",
-        path: './dist/lib',
+        path: './dist/dui/lib',
         libraryTarget: 'umd'
     }
 });
