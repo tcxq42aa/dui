@@ -6,6 +6,7 @@
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid transparent;
+  font-size: $font-size-base;
   font-weight: normal;
   text-align: center;
   text-decoration: none;
@@ -13,10 +14,11 @@
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-
-  @include button-size($btn-padding-y, 0, $font-size-base, $line-height, 2px);
+  line-height: $btn-line-height;
+  border-radius: 2px;
+  //@include button-size($btn-padding-y, 0, $font-size-base, $line-height, 2px);
   @include transition(all .2s ease-in-out);
-  @include button-variant(#fff, #39ac6a, transparent);
+  //@include button-variant(#fff, $main-color, transparent);
 
   @include active-focus{
     @include tab-focus();
@@ -48,26 +50,40 @@
 // Alternate buttons
 //
 
-.btn-positive {
-  @include button-variant(#fff, #39ac6a, transparent);
-  @include button-min-size($btn-min-width-md);
-}
-.btn-danger {
-  @include button-variant(#fff, #ea5555, transparent);
-  @include button-min-size($btn-min-width-md);
-}
-.btn-warning {
-  @include button-variant(#fff, #f5ba4e, transparent);
-  @include button-min-size($btn-min-width-md);
-}
-.btn-positive-inverse {
-  @include button-variant(#39ac6a, transparent, #36ac6a);
-  @include button-min-size($btn-min-width-md);
-}
-.btn-positive-white {
-  @include button-variant(#fff, transparent, #fff);
-  @include button-min-size($btn-min-width-md);
-}
-.s {
-  @include button-variant(#414141, #fff, #c2c2c2);
+
+@each $size in $btn-type{
+  .btn-positive-#{$size}{
+    @include button-variant(#fff, $main-color, transparent);
+    @include button-size($size);
+  }
+  .btn-danger-#{$size} {
+    @include button-variant(#fff, #ea5555, transparent);
+    @include button-size($size);
+  }
+  .btn-warning-#{$size} {
+    @include button-variant(#fff, #f5ba4e, transparent);
+    @include button-size($size);
+  }
+  .btn-positive-inverse-#{$size} {
+    @include button-variant($main-color, #fff, $main-color);
+    @include button-size($size);
+  }
+
+  .btn-nagetive-#{$size} {
+    @include button-variant(#414141, #fff, #c2c2c2);
+    @include button-size($size);
+  }
+  .btn-delete-#{$size} {
+    @include button-variant(#ea4947, #fff, #ea4947);
+    @include button-size($size);
+  }
+  .btn-close-#{$size} {
+    @include button-variant(#fff, #acacac, transparent);
+    @include button-size($size);
+  }
+
+  .btn-positive-white-#{$size} {
+    @include button-variant(#fff, transparent, #fff);
+    @include button-size($size);
+  }
 }
