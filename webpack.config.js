@@ -1,31 +1,73 @@
 /**
  * Created by charles on 16/8/5.
  */
-var path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var helpers = require('./helpers');
 
-var webpackMerge = require('webpack-merge');
-var commonConfig = require('./webpack.common.js');
-
-module.exports = webpackMerge(commonConfig, {
+module.exports = {
     entry: {
-        doc: './src/doc/main'
+        'vendor': ['./src/dui/lib/polyfills.ts','./src/dui/lib/angular.ts'],
+        'app': './src/doc/main.ts',
+        'directive': './src/dui/component/index'
     },
+
+    resolve: {
+        extensions: ['', '.js', '.ts']
+    },
+
     output: {
-        path: path.join(__dirname, 'dist/doc'),
-        filename: 'asset/[name].js',
-        publicPath: "/",
+        path: helpers.root('out'),
+        publicPath: 'http://localhost:8080/',
+        filename: '[name].js',
+        chunkFilename: '[id].chunk.js',
+        library: '[name]',
         libraryTarget: 'umd'
     },
+
+    devServer: {
+        historyApiFallback: true,
+        stats: 'minimal'
+    },
+
+    module: {
+        loaders: [
+            {
+                test: /\.ts$/,
+                loaders: ['ts', 'angular2-template-loader']
+            },
+            {
+                test: /\.html$/,
+                loader: 'raw'
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loader: 'file?name=assets/[name].[hash].[ext]'
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract('css!sass?sourceMap')
+            }
+        ]
+    },
+
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/doc/index.html'
+        new webpack.ContextReplacementPlugin(/system/, /^$/),
+        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.DedupePlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
+        new ExtractTextPlugin('[name].css'),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'directive', 'vendor']
         }),
-        new ExtractTextPlugin("asset/[name].css")
-    ],
-    externals: [
-        /^@angular\/.+/,
-        /^dui2\/.+/
-    ],
-});
+
+        new HtmlWebpackPlugin({
+            template: 'src/doc/index.html'
+        })
+    ]
+};

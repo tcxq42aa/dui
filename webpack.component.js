@@ -7,12 +7,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        'core': ["./src/dui/component/core"],
+        'core': ["./src/dui/component/directives"],
     },
     output: {
         filename: "[name].js",
         chunkFilename: "[id].js",
-        path: './dist/dui/component',
+        path: './dist/component',
         libraryTarget: 'umd',
     },
     externals: [

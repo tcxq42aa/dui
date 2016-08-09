@@ -1,18 +1,9 @@
 /**
  * Created by charles on 16/7/25.
  */
-import "reflect-metadata";
-import "rxjs";
-var url = require('url');
-require('zone.js/dist/zone');
-if (process.env.NODE_ENV === 'prod') {
-    // Production
-} else {
-    // Development
-    Error['stackTraceLimit'] = Infinity;
-    require('zone.js/dist/long-stack-trace-zone');
-}
-
+let url = require('url');
+export let System = require('systemjs/dist/system.src.js');
+// Angular 2
 export * from '@angular/platform-browser';
 export * from '@angular/platform-browser-dynamic';
 export * from '@angular/core';
@@ -21,8 +12,6 @@ export * from '@angular/http';
 export * from '@angular/http/testing';
 export * from '@angular/router';
 export * from 'angular2-in-memory-web-api';
-
-export let System = require('systemjs/dist/system.src.js');
 
 (function (global) {
     function loadScript(url, callback?) {
