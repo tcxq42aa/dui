@@ -2,7 +2,7 @@
 @import "../dui/style/utils/variables";
 
 header {
-    color: $color_positive;
+    color: $main-color;
     @include clearfix;
     .logo {
         font-size: 20px;
@@ -25,21 +25,21 @@ header {
             -o-transition: background-color .15s linear;
             transition: background-color .15s linear;
             &:hover,&.active {
-                background-color: lighten($color_positive, 50%);
+                background-color: lighten($main-color, 50%);
             }
         }
         @include clearfix;
     }
     a {
         text-decoration: none;
-        color: $color_positive;
+        color: $main-color;
         height: 46px;
         line-height: 46px;
         &:hover {
             text-decoration: none;
         }
         &:hover, &:visited {
-            color: $color_positive!important;
+            color: $main-color!important;
         }
     }
 }

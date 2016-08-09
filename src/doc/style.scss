@@ -15,7 +15,7 @@ pre {
   margin: auto;
 }
 .summary {
-  background-color: lighten($color_positive, 10%);
+  background-color: lighten($main-color, 10%);
   padding: 20px;
   color: #fff;
   & p {

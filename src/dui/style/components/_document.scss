@@ -33,18 +33,28 @@ a.link-main{
   color: $main-color;
 
   &:hover, &:visited:hover{
-  color: $main-color;;
-  text-decoration: underline;
-}
+    color: $main-color;;
+    text-decoration: underline;
+  }
 
   &:visited{
     color: $main-color;;
   }
 }
+a.link-spec{
+  color: $link-spec-color;
 
+  &:hover, &:visited:hover{
+    color: $link-spec-color;;
+    text-decoration: underline;
+  }
+
+  &:visited{
+    color: $link-spec-color;;
+  }
+}
 /*正文颜色*/
 p, .text-body{
-  //font-size: 14px;
   color: $text-body-color;
 }
 
@@ -53,5 +63,9 @@ label{
 }
 /*input-placeholder颜色*/
 input::-webkit-input-placeholder{
-  color:#d8d8d8;
+  color:$input-placeholder-color;
+}
+
+b{
+  margin: 0 3px;
 }

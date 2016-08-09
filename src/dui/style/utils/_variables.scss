@@ -1,94 +1,68 @@
-$color_positive: #39AC6A;
 $color_negative: #ACACAC;
-$color_danger: #EA5555;
-$color_warning: #F5BA4E;
-$color_normal: #F5BA4E;
 
-$global-size: md !default;
-
+//----------------字体------------------------
 $font-family-heiti: "Microsoft YaHei",微软雅黑,宋体 !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base: $font-family-heiti !default;
 $font-size-root:             12px !default;
-
-
-$font-size-base:             1rem !default;
-$font-size-lg:               1.25rem !default;
-$font-size-sm:               .875rem !default;
-$font-size-xs:               .75rem !default;
-
-
+//$font-size-base:             1rem !default;
 $line-height:                1.5 !default;
+//----------------字体 end--------------------
 
-
-//----------------标题-----------------------
+//----------------标题------------------------
 $headings-fontSize: (
-  h1: 2.5rem,
-  h2: 2rem,
-  h3: 1.75rem,
-  h4: 1.5rem,
-  h5: 1.175rem,
-  h6: 1rem
+        h1: 2.5rem,
+        h2: 2rem,
+        h3: 1.75rem,
+        h4: 1.5rem,
+        h5: 1.175rem,
+        h6: 1rem
 );
-
-
 $headings-margin-top:        .5em !default;
 $headings-margin-bottom:     .5em !default;
 $headings-font-family:       inherit !default;
 $headings-font-weight:       500 !default;
 $headings-line-height:       1 !default;
 $headings-color:             inherit !default;
+//---------------标题 end---------------------
 
-//---------------标题 end--------------------
-
-
-
-//----------------颜色-----------------------
-
+//----------------颜色------------------------
 //主色
 $main-color: #39ac6a !default;
-
+//提醒
+$warn-color: #f5a623 !default;
+//警示
+$danger-color: #ea5555 !default;
 //正文
 $text-body-color: #333 !default;
+//label
 $text-label-color: #999 !default;
 //input
 $input-placeholder-color: #d8d8d8 !default;
-
-//提醒
-$warn-color: #f5a623 !default;
-
-//警示
-$warn-serious-color: #ea5555 !default;
-
 //link
 $link-color: #0088cc !default;
 $link-visit-color: red !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
+$link-spec-color: #999 !default;
 //----------------颜色 end--------------------
 
-
-
-$cursor-disabled:  not-allowed !default;
-$btn-disabled-opacity:  .95 !default;
-
-//按钮
+//----------------按钮------------------------
 $btn-line-height: 1 !default;
 $btn-padding-x:                  .7em;
 $btn-padding-y:                  .7em;
 $btn-font-weight:                normal !default;
 
-$btn-min-width-md: 8rem !default;
-
+//按钮尺寸
 $btn-type: sm md mdf lg !default;
 $btn-size:(
-  sm: .334rem .834rem 5rem,
-  md: .75rem 1rem 8rem,
-  mdf: .75rem 1rem 5.334rem,
-  lg: .6rem 1rem 8rem
-)
-//$btn-size:(
-//  sm: 5px 10px 60px,
-//  md: 5px 10px 96px,
-//  lg: 5px 10px 112px
-//);
+        sm: .334rem .834rem 5rem,
+        md: .75rem 1rem 8rem,
+        mdf: .75rem 1rem 5.334rem,
+        lg: .6rem 1rem 8rem
+);
+//----------------按钮 end--------------------
+
+//----------------光标------------------------
+$cursor-disabled:  not-allowed !default;
+//----------------光标 end--------------------

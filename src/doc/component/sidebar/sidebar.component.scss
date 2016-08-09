@@ -13,8 +13,8 @@
       font-weight: bold;
     }
     &:hover,&.active {
-      border-left-color: $color_positive;
-      color: $color_positive;
+      border-left-color: $main-color;
+      color: $main-color;
     }
   }
   ul {
