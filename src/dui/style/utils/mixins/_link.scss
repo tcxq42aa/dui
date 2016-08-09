@@ -1,0 +1,12 @@
+@mixin link-type($color) {
+  color: $color;
+
+  &:hover, &:visited:hover{
+    color: $color;;
+    text-decoration: underline;
+  }
+
+  &:visited{
+    color: $color;;
+  }
+}

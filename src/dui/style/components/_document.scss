@@ -14,45 +14,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a{
-  color: $link-color;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:hover, &:visited:hover{
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-
-  &:visited{
-    color: $link-visit-color;
-  }
-}
-
-a.link-main{
-  color: $main-color;
-
-  &:hover, &:visited:hover{
-    color: $main-color;;
-    text-decoration: underline;
-  }
-
-  &:visited{
-    color: $main-color;;
-  }
-}
-a.link-spec{
-  color: $link-spec-color;
-
-  &:hover, &:visited:hover{
-    color: $link-spec-color;;
-    text-decoration: underline;
-  }
-
-  &:visited{
-    color: $link-spec-color;;
-  }
-}
 /*正文颜色*/
 p, .text-body{
   color: $text-body-color;

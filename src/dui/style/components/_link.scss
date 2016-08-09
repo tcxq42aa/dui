@@ -1,0 +1,24 @@
+@import "../utils/variables";
+@import "../utils/mixins/mixin-all";
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &:visited:hover{
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:visited{
+    color: $link-visit-color;
+  }
+}
+
+a.link-main{
+  @include link-type($main-color);
+}
+a.link-spec{
+  @include link-type($link-spec-color);
+}
