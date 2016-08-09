@@ -28,7 +28,8 @@ module.exports = {
 
     devServer: {
         historyApiFallback: true,
-        stats: 'minimal'
+        stats: 'minimal',
+        contentBase: './out'
     },
 
     module: {
