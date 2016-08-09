@@ -5,11 +5,27 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var isProd = process.env.NODE_ENV == 'prod';
+
+var plugins = [
+    new webpack.ContextReplacementPlugin(/system/, /^$/),
+    new ExtractTextPlugin('[name].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: ['app', 'directive', 'vendor']
+    }),
+    new HtmlWebpackPlugin({
+        template: 'src/doc/index.html'
+    })
+];
+
+if(isProd) {
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
 
 module.exports = {
     entry: {
-        'vendor': ['./src/dui/lib/polyfills.ts','./src/dui/lib/angular.ts'],
-        'app': './src/doc/main.ts',
+        'vendor': ['./src/dui/lib/polyfills.ts', './src/dui/lib/angular.ts'],
+        'app': ['webpack/hot/dev-server', './src/doc/main.ts'],
         'directive': './src/dui/component/index'
     },
 
@@ -18,7 +34,7 @@ module.exports = {
     },
 
     output: {
-        path: helpers.root('out'),
+        path: helpers.root('dist/doc'),
         publicPath: 'http://localhost:8080/',
         filename: '[name].js',
         chunkFilename: '[id].chunk.js',
@@ -48,27 +64,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+                loader: isProd ? ExtractTextPlugin.extract('style', 'css?sourceMap') : 'style-loader!css'
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css!sass?sourceMap')
+                loader: isProd ? ExtractTextPlugin.extract('css!sass?sourceMap') : 'style-loader!css!sass'
             }
         ]
     },
 
-    plugins: [
-        new webpack.ContextReplacementPlugin(/system/, /^$/),
-        new webpack.NoErrorsPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        // new webpack.optimize.UglifyJsPlugin(),
-        new ExtractTextPlugin('[name].css'),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'directive', 'vendor']
-        }),
-
-        new HtmlWebpackPlugin({
-            template: 'src/doc/index.html'
-        })
-    ]
+    plugins: plugins
 };

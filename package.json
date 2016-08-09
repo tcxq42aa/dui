@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors",
+    "start": "NODE_ENV=dev webpack-dev-server --hot --inline --progress --colors",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "build:doc": "rimraf ./out && NODE_ENV=prod webpack --progress --colors",
+    "build:doc": "rimraf ./dist/doc && NODE_ENV=prod webpack --progress --colors",
     "build:angular": "rimraf ./dist/lib && NODE_ENV=prod webpack --config ./webpack.angular.js --progress --colors",
     "build:component": "rimraf ./dist/component && NODE_ENV=prod webpack --config ./webpack.component.js --progress --colors",
     "generate:d.ts": "tsc -d -p ./src/dui/component --outDir ./dist/definition"
