@@ -5,38 +5,20 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
-var isProd = process.env.NODE_ENV == 'prod';
-
-var plugins = [
-    new webpack.ContextReplacementPlugin(/system/, /^$/),
-    new ExtractTextPlugin('[name].css'),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: ['app', 'directive', 'vendor']
-    }),
-    new HtmlWebpackPlugin({
-        template: 'src/doc/index.html'
-    })
-];
-
-if(isProd) {
-    plugins.push(new webpack.optimize.UglifyJsPlugin());
-}
 
 module.exports = {
     entry: {
         'vendor': ['./src/dui/lib/polyfills.ts', './src/dui/lib/angular.ts'],
-        'app': ['webpack/hot/dev-server', './src/doc/main.ts'],
         'directive': './src/dui/component/index'
     },
-
     resolve: {
         extensions: ['', '.js', '.ts']
     },
 
     output: {
         path: helpers.root('dist/doc'),
-        publicPath: 'http://localhost:8080/',
-        filename: '[name].js',
+        publicPath: '/',
+        filename: 'assets/[name].js',
         chunkFilename: '[id].chunk.js',
         library: '[name]',
         libraryTarget: 'umd'
@@ -45,7 +27,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
-        contentBase: './out'
+        contentBase: './dist/doc'
     },
 
     module: {
@@ -63,15 +45,21 @@ module.exports = {
                 loader: 'file?name=assets/[name].[hash].[ext]'
             },
             {
-                test: /\.css$/,
-                loader: isProd ? ExtractTextPlugin.extract('style', 'css?sourceMap') : 'style-loader!css'
-            },
-            {
-                test: /\.scss$/,
-                loader: isProd ? ExtractTextPlugin.extract('css!sass?sourceMap') : 'style-loader!css!sass'
+                test: /\.json$/,
+                loader: 'json'
             }
         ]
     },
 
-    plugins: plugins
+    plugins: [
+        new webpack.ContextReplacementPlugin(/systemjs/, /^$/),
+        new webpack.ContextReplacementPlugin(/system/, /^$/),
+        new ExtractTextPlugin('assets/[name].css'),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'directive', 'vendor']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/doc/index.html'
+        })
+    ]
 };
