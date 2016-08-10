@@ -1,4 +1,4 @@
-@import "../dui/style/utils/variables";
+@import "../dui/style/utils/variable/variable-all";
 body {
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -11,7 +11,7 @@ pre {
   }
 }
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
 }
 .summary {
