@@ -1,0 +1,110 @@
+$tip_default_bg_color: #3e3e3e;
+$tip_default_text_color: #fff;
+$tip_pos_offset: -12px;
+$tip_margin_offset: -6px;
+
+$tip_type: top topLeft topRight right rightTop rightBottom bottom bottomLeft bottomRight left leftTop leftBottom;
+$tip_type_map: (
+        top: top left 50% bottom left,
+        topLeft: top left 8px bottom left,
+        topRight: top right 8px bottom left,
+        right: right top 50% left top,
+        rightTop: right top 8px left top,
+        rightBottom: right bottom 8px left top,
+        bottom: bottom left 50% top left,
+        bottomLeft: bottom left 8px top left,
+        bottomRight: bottom right 8px top left,
+        left: left top 50% right top,
+        leftTop: left top 8px right top,
+        leftBottom: left bottom 8px right top,
+);
+
+@mixin apply_theme($name, $background, $color){
+  &.#{$name} {
+    color: $color;
+    border: 1px solid #c0c0c0;
+    background-color: $background;
+    width: 23.3rem;
+    height: 10.9rem;
+    padding: 1.3rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    @each $type in $tip_type {
+      $param: map_get($tip_type_map, $type);
+      &.#{$type}:before {
+        z-index: 1000;
+        display: block;
+        content: ' ';
+        position: absolute;
+        border: 7px solid transparent;
+        border-#{nth($param, 1)}-color: $background;
+        border-#{nth($param, 1)}-width: 5px;
+        @if unit(nth($param, 3))=='px'{
+          #{nth($param, 2)}: nth($param, 3) + 15;
+        } @else {
+          #{nth($param, 2)}: nth($param, 3);
+        }
+        #{nth($param, 4)}: $tip_pos_offset;
+        margin-#{nth($param, 5)}: $tip_margin_offset;
+      }
+      &.#{$type}:after {
+        @if unit(nth($param, 3))=='px'{
+          #{nth($param, 2)}: nth($param, 3) + 15;
+        } @else {
+          #{nth($param, 2)}: nth($param, 3);
+        }
+        #{nth($param, 4)}: $tip_pos_offset - 1;
+      }
+    }
+    & .tip-title {
+      line-height: 1;
+      margin: 0 0 1.3rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    & .tip-content {
+      flex-grow: 1;
+    }
+    & .tip-action {
+      display: flex;
+      flex-flow: row-reverse;
+      a {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.tips {
+  z-index: 999;
+  position: absolute;
+  color: $tip_default_text_color;
+  border-color: $tip_default_bg_color;
+  background: $tip_default_bg_color;
+  border-radius: 2px;
+  padding: .5rem 2.5rem;
+  white-space: nowrap;
+  line-height: 1;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+
+  &:after {
+    z-index: 999;
+    display: block;
+    content: ' ';
+    position: absolute;
+    border: 7px solid transparent;
+  }
+
+  @each $type in $tip_type {
+    &.#{$type}:after {
+      $param: map_get($tip_type_map, $type);
+      border-#{nth($param, 1)}-color: inherit;
+      border-#{nth($param, 1)}-width: 5px;
+      #{nth($param, 2)}: nth($param, 3);
+      #{nth($param, 4)}: $tip_pos_offset;
+      margin-#{nth($param, 5)}: $tip_margin_offset;
+    }
+  }
+
+  @include apply_theme(dialog, #fff, #414141);
+}

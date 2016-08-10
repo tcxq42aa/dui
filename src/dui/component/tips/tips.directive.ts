@@ -10,7 +10,6 @@ import {
     ComponentResolver,
     ViewContainerRef,
     ReflectiveInjector,
-    provide,
     AfterViewInit,
     ViewChild,
     ChangeDetectorRef,
@@ -20,7 +19,7 @@ import {
 } from "@angular/core";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
 
-import "./tips.directive.css";
+import "./tips.directive.scss";
 
 @Component({
     moduleId: module.id,
@@ -35,6 +34,7 @@ class TipsComponent implements AfterViewInit {
     private _offset:Offset = new Offset();
     private _left:any;
     private _top:any;
+    private theme:string;
 
     @Output('show') showEmit;
     @Output('hide') hideEmit;
@@ -55,6 +55,7 @@ class TipsComponent implements AfterViewInit {
 
     constructor(injector:Injector, private _elementRef:ElementRef, private ref:ChangeDetectorRef) {
         this.content = injector.get('content');
+        this.theme = injector.get('theme');
         this._offset = injector.get('offset');
         this.direction = Position[Position[injector.get('direction')]] || Position[Position.bottom];
     }
@@ -124,6 +125,10 @@ class TipsComponent implements AfterViewInit {
         }
         this.ref.detectChanges();
     }
+
+    onClick(event){
+        console.log('onClick');
+    }
 }
 
 @Directive({
@@ -133,7 +138,7 @@ class TipsComponent implements AfterViewInit {
         '(focus)': 'onFocus($event)',
         '(blur)': 'onBlur($event)',
         '(mouseenter)': 'onMouseEnter($event)',
-        '(mouseleave)': 'onMouseLeave($event)',
+        '(mouseleave)': 'onMouseLeave($event)'
     },
     providers: [HTTP_PROVIDERS],
     exportAs: 'seTip'
@@ -144,6 +149,7 @@ export class TipsDirective {
     @Input() toggle:string = 'focus';
     @Input() remote:string;
     @Input() dismiss:number;
+    @Input() theme:string;
 
     @Output('show') private showEmit = new EventEmitter();
     @Output('hide') private hideEmit = new EventEmitter();
@@ -237,9 +243,10 @@ export class TipsDirective {
     private loadTip() {
         this.fetchContent().then((content)=> {
             let resolved = ReflectiveInjector.resolveAndCreate([
-                provide('content', {useValue: content}),
-                provide('direction', {useValue: this.direction}),
-                provide('offset', {useValue: this.offset(this._elementRef.nativeElement)})], this._viewContainer.parentInjector);
+                {provide: 'content', useValue: content},
+                {provide: 'theme', useValue: this.theme},
+                {provide: 'direction', useValue: this.direction},
+                {provide: 'offset', useValue: this.offset(this._elementRef.nativeElement)}], this._viewContainer.parentInjector);
             this._componentResolver.resolveComponent(TipsComponent).then(factory => {
                 this.child = this._viewContainer.createComponent(factory, 0, resolved).instance;
                 this.child.showEmit = this.showEmit;

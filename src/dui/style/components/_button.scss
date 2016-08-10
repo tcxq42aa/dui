@@ -5,7 +5,7 @@
 .btn {
   display: inline-block;
   box-sizing: border-box;
-  font-size: $font-size-root;
+  font-size: 1rem;
   font-weight: normal;
   text-align: center;
   text-decoration: none;
@@ -67,7 +67,7 @@
   }
 
   /* 负向 */
-  .btn-nagetive-#{$size} {
+  .btn-negative-#{$size} {
     @include button-variant(#414141, #fff, #c2c2c2);
     @include button-size($size);
   }
