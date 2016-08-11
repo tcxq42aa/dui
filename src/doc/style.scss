@@ -16,7 +16,8 @@ pre {
 }
 .summary {
   background-color: lighten($main-color, 10%);
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff;
   & p {
     color: #fff;
@@ -29,7 +30,7 @@ pre {
 }
 .page-content {
   line-height: 1.8;
-  font-size: 16px;
+  //font-size: 1rem;
 }
 .seg {
   display: block;

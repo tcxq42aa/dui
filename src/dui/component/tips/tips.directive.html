@@ -1,5 +1,20 @@
-<div #child class="tips"
-     *ngIf="visible"
-     [ngClass]="direction"
-     [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}" [innerHTML]="content">
+<div *ngIf="!theme">
+    <div #child class="tips"
+         *ngIf="visible"
+         [ngClass]="direction"
+         [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}" [innerHTML]="content">
+    </div>
+</div>
+<div *ngIf="theme" (click)="onClick($event)">
+    <div #child class="tips"
+         *ngIf="visible"
+         [ngClass]="[direction, theme].join(' ')"
+         [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}">
+        <div class="tip-title">title</div>
+        <div class="tip-content">内容</div>
+        <div class="tip-action">
+            <a class="link-spec">关闭</a>
+            <a class="link-main">确定</a>
+        </div>
+    </div>
 </div>

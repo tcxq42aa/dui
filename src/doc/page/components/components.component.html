@@ -5,14 +5,33 @@
     </div>
     <div class="p-content">
         <h1 id="tips" doc-sidebar class="page-header">提示</h1>
-        <div>
-            <a class="btn-positive" se-tips title="hello" toggle="auto" direction="topRight">Button</a>
-            <a class="btn-positive" se-tips title="hello" toggle="auto" direction="topLeft">Button</a>
-            <a class="btn-positive" se-tips title="hello" toggle="auto" direction="rightTop">Button</a>
-            <a class="btn-positive" se-tips title="hello" toggle="auto" direction="leftBottom">Button</a>
-            <!--<input type="text" se-tips title="hello" toggle="auto+1200" direction="topRight">-->
-            <!--<a href="javascript:;" se-tips title="hello" toggle="auto+1200">链接</a>-->
-            <!--<img src="http://placehold.it/50x50" se-tips title="hello" toggle="auto+1200" direction="topRight">-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" toggle="auto" direction="bottomRight">bottomLeft</a>
+                </div>
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字<br>请输入数字" toggle="auto" direction="leftBottom">leftBottom</a>
+                </div>
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" toggle="auto" direction="top">top</a>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 80px;">
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" theme="dialog" toggle="click" direction="right">right</a>
+                </div>
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" theme="dialog" toggle="click" direction="bottom">bottom</a>
+                </div>
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" theme="dialog" toggle="click" direction="topLeft">topLeft</a>
+                </div>
+                <div class="expend-1">
+                    <a class="link-spec" href="javascript:;" se-tips title="请输入数字" theme="dialog" toggle="click" direction="rightTop">rightTop</a>
+                </div>
+            </div>
         </div>
     </div>
 </doc-page>

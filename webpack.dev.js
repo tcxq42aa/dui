@@ -13,11 +13,11 @@ module.exports = webpackMerge(commonConfig, {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style-loader!css!sass?sourceMap'
+                loader: 'style!css!sass?sourceMap'
             },
             {
                 test: /\.scss$/,
-                loader: 'style-loader!css!sass?sourceMap'
+                loader: 'style!css!sass?sourceMap'
             }
         ]
     },

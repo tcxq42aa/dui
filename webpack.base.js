@@ -14,6 +14,7 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.ts']
     },
+    devtool: 'source-map ',
 
     output: {
         path: helpers.root('dist/doc'),
@@ -53,13 +54,13 @@ module.exports = {
 
     plugins: [
         new webpack.ContextReplacementPlugin(/systemjs/, /^$/),
-        new webpack.ContextReplacementPlugin(/system/, /^$/),
         new ExtractTextPlugin('assets/[name].css'),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'directive', 'vendor']
         }),
         new HtmlWebpackPlugin({
-            template: './src/doc/index.html'
+            template: './src/doc/index.html',
+            favicon: './src/dui/images/favicon.ico'
         })
     ]
 };
