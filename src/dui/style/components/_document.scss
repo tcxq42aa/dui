@@ -27,6 +27,10 @@ input::-webkit-input-placeholder{
   color:$input-placeholder-color;
 }
 
+:focus{
+  outline: none;
+}
+
 b{
   margin: 0 3px;
 }

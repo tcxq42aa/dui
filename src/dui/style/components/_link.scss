@@ -22,3 +22,24 @@ a.link-main{
 a.link-spec{
   @include link-type($link-spec-color);
 }
+
+a.link-nav{
+  color: #767676!important;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: $font-family-sans-serif;
+
+  &:hover, &:visited:hover{
+    color: $main-color!important;
+    text-decoration: none;
+  }
+  
+  &.active{
+    color: $main-color!important;
+    font-weight: 500!important;
+  }
+
+  &:visited{
+    color: $main-color;
+  }
+}

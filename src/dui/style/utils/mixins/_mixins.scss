@@ -10,8 +10,4 @@
   box-shadow: $shadow;
 }
 
-@mixin transition($transition...) {
-  transition: $transition;
-}
-
 

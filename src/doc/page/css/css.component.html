@@ -29,6 +29,11 @@
                 <div class="col-3">col-3</div>
             </div>
             <div class="row">
+                <div class="col-1">col-1</div>
+                <div class="col-3 col-offset-1" style="border-left: 1px solid #ccc">col-3 col-offst-1</div>
+                <div class="col-3 col-offset-2" style="border-left: 1px solid #ccc">col-3 col-offst-2</div>
+            </div>
+            <div class="row">
                 <div class="col-8">
                     <input type="text" style="width: 100%;">
                 </div>
@@ -255,7 +260,28 @@
 
         <!-- 输入框 start-->
         <h1 id="input" doc-sidebar class="page-header">输入框</h1>
-
+        <div class="row">
+            <div class="col-3 col-offset-1" style="margin-bottom: 20px">
+                <input type="text" class="form-control form-control-sm" placeholder="28px">
+            </div>
+            <div class="col-3" style="margin-bottom: 20px">
+                <input type="text" class="form-control" placeholder="32px">
+            </div>
+            <div class="col-3 col-offset-1" style="margin-bottom: 20px">
+                <input type="text" class="form-control form-control-lg" placeholder="36px">
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-3 col-offset-1" style="margin-bottom: 20px">
+            <input type="text" class="form-control form-control-sm form-control-webkit" placeholder="28px">
+        </div>
+        <div class="col-3" style="margin-bottom: 20px">
+            <input type="text" class="form-control form-control-webkit" placeholder="32px">
+        </div>
+        <div class="col-3 col-offset-1" style="margin-bottom: 20px">
+            <input type="text" class="form-control form-control-lg form-control-webkit" placeholder="36px">
+        </div>
+    </div>
         <div>
 <pre>
     <code doc-highlight="html" se-copy>

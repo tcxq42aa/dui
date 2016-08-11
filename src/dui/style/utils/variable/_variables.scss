@@ -49,6 +49,7 @@ $text-body-color: #333 !default;
 $text-label-color: #999 !default;
 //input
 $input-placeholder-color: #d8d8d8 !default;
+$input-border-color: #e0e0e0 !default;
 //link
 $link-color: #0088cc !default;
 $link-visit-color: red !default;
@@ -76,3 +77,12 @@ $btn-size:(
 //----------------光标------------------------
 $cursor-disabled:  not-allowed !default;
 //----------------光标 end--------------------
+
+//----------------表单------------------------
+$input-color: $text-body-color !default;
+$input-border-radius: 2px;
+$input-box-shadow-light: inset 0 1px 3px 0 rgba(0,0,0,.1) !default;
+$input-box-shadow-heavy: inset 0 1px 3px 0 rgba(0,0,0,.1) !default;
+//----------------表单 end--------------------
+
+
