@@ -1,6 +1,6 @@
 $input-border-focus:             #66afe9 !default;
 $input-box-shadow-focus:         rgba(102,175,233,.6) !default;
-@mixin form-control-focus() {
+@mixin input-standard-focus() {
   &:focus {
     border-color: $input-border-focus;
     outline: none;

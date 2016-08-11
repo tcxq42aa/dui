@@ -1,6 +1,6 @@
 
 
-.form-control {
+.input-standard {
   display: block;
   width: 100%;
   padding: 6px 10px;
@@ -27,17 +27,17 @@
 }
 
 // sizing
-.form-control-sm {
+.input-sm {
    padding: 4px 10px;
  }
 
-.form-control-lg {
+.input-lg {
   padding: 8px 10px;
 }
 
-.form-control-webkit{
+.input-webkit{
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
+  @include input-standard-focus();
 
 }
 
@@ -53,7 +53,7 @@
     border-collapse: separate;
   }
 
-  .form-control {
+  .input-standard {
     // Ensure that the input is always above the *appended* addon button for
     // proper border colors.
     position: relative;
