@@ -18,9 +18,9 @@ import {
     Renderer
 } from "@angular/core";
 import {Http, HTTP_PROVIDERS} from "@angular/http";
+import {DomSanitizationService, SafeHtml} from "@angular/platform-browser";
 
 import "./tips.directive.scss";
-
 @Component({
     moduleId: module.id,
     selector: 'se-tips',
@@ -30,6 +30,7 @@ class TipsComponent implements AfterViewInit {
 
     private visible:boolean = true;
     private content:string;
+    private trustedContent:SafeHtml;
     private direction:string;
     private _offset:Offset = new Offset();
     private _left:any;
@@ -53,11 +54,12 @@ class TipsComponent implements AfterViewInit {
         this.hideEmit.emit();
     }
 
-    constructor(injector:Injector, private _elementRef:ElementRef, private ref:ChangeDetectorRef) {
+    constructor(injector:Injector, private _elementRef:ElementRef, private ref:ChangeDetectorRef,private sanitizer: DomSanitizationService) {
         this.content = injector.get('content');
         this.theme = injector.get('theme');
         this._offset = injector.get('offset');
         this.direction = Position[Position[injector.get('direction')]] || Position[Position.bottom];
+        this.trustedContent = sanitizer.bypassSecurityTrustHtml(this.content);
     }
 
     ngAfterViewInit() {
@@ -124,10 +126,6 @@ class TipsComponent implements AfterViewInit {
                 break;
         }
         this.ref.detectChanges();
-    }
-
-    onClick(event){
-        console.log('onClick');
     }
 }
 

@@ -1,9 +1,13 @@
-<ul class="sidebar" *ngIf="data">
+<ul class="sidebar" *ngIf="data" doc-scrollspy>
     <li *ngFor="let item of data.values()">
-        <a class="link-nav" href="#{{item.anchor}}" (click)="clickAnchor(item.anchor)" [ngClass]="{active: anchor==item.anchor}">{{item.text}}</a>
+        <a class="link-nav" href="#{{item.anchor}}"
+           doc-scrollspy-active="active"
+           (click)="clickAnchor(item.anchor)" [ngClass]="{active: anchor==item.anchor}">{{item.text}}</a>
         <ul *ngIf="item.children">
             <li *ngFor="let childItem of item.children">
-                <a href="#{{childItem.anchor}}" (click)="clickSubAnchor(childItem.anchor, item.anchor)"
+                <a class="link-nav" href="#{{childItem.anchor}}"
+                   doc-scrollspy-active="active"
+                   (click)="clickSubAnchor(childItem.anchor, item.anchor)"
                    [ngClass]="{active: subAnchor==childItem.anchor}">{{childItem.text}}</a>
             </li>
         </ul>
