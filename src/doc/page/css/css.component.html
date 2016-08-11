@@ -1,293 +1,30 @@
 <doc-page>
-    <div class="p-header aaa">
+    <div class="p-header">
         <h1>全局 CSS 样式</h1>
         <p>设置全局 CSS 样式；基本的 HTML 元素均可以通过 class 设置样式并得到增强效果；还有先进的栅格系统。</p>
     </div>
     <div class="p-content">
 
-        <!-- 栅格 start-->
-        <h1 id="grid" doc-sidebar class="page-header">栅格系统</h1>
-        <div id="layout" class="container">
-            <div class="row row-center">
-                <div class="col-1">col-1 row-center row-center row-center</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-                <div class="col-1">col-1</div>
-            </div>
-            <div class="row">
-                <div class="col-3">col-3</div>
-                <div class="col-3">col-3</div>
-                <div class="col-3">col-3</div>
-                <div class="col-3">col-3</div>
-            </div>
-            <div class="row">
-                <div class="col-1">col-1</div>
-                <div class="col-3 col-offset-1" style="border-left: 1px solid #ccc">col-3 col-offst-1</div>
-                <div class="col-3 col-offset-2" style="border-left: 1px solid #ccc">col-3 col-offst-2</div>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <input type="text" style="width: 100%;">
-                </div>
-                <div class="col-4">
-                    <input type="text" style="width: 100%;">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1">col-1</div>
-                <div class="col-1 expend-2">col-1 expend-2</div>
-                <div class="col-1 expend-1">col-1 expend-1</div>
-            </div>
-            <div class="row">
-                <div class="col-1">col-1</div>
-                <div class="col-1 expend-2">
-                    <input value="aaa">
-                </div>
-                <div class="col-1 expend-1">col-1 expend-1</div>
-            </div>
-            <div class="row row-center" style="justify-content: space-around; ">
-                <input class="" type="radio">
-                <input class="col-2 " value="a">
-                <input class="col-2 " value="a">
-                <input class="col-2 " value="a">
-            </div>
-        </div>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    &lt;div class="row"&gt;
-        &lt;div class="col-8">col-8&lt;/div&gt;
-        &lt;div class="col-4">col-4&lt;/div&gt;
-    &lt;/div&gt;
-    </code>
-</pre>
-        </div>
-        <!-- 栅格 end-->
+        <!-- 栅格 -->
+        <div>${require('./template/grid.html')}</div>
 
+        <!-- 标题 -->
+        <div>${require('./template/title.html')}</div>
 
-        <!-- 标题 start-->
-        <h1 id="title" doc-sidebar class="page-header">标题</h1>
-        <h1>标题</h1>
-        <h2>标题</h2>
-        <h3>标题</h3>
-        <h4>标题</h4>
-        <h5>标题</h5>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    &lt;h1&gt;标题&lt;/h1&gt;
-    &lt;h2&gt;标题&lt;/h2&gt;
-    &lt;h3&gt;标题&lt;/h3&gt;
-    &lt;h4&gt;标题&lt;/h4&gt;
-    &lt;h5&gt;标题&lt;/h5&gt;
-    </code>
-  </pre>
-        </div>
-        <!-- 标题 end-->
+        <!-- 段落 -->
+        <div>${require('./template/paragraph.html')}</div>
 
+        <!-- 颜色 -->
+        <div>${require('./template/color.html')}</div>
 
-        <!-- 段落 start-->
-        <h1 id="paragraph" doc-sidebar class="page-header">段落</h1>
-        <p>这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落这是普通段落这是<b>加强文本</b>普通段落这是普通段落这是普通段落这是普通段落
-            这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落</p>
-        <p>这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落
-            这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落</p>
-        <p>这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落
-            这是普通段落这是普通段落这是普通段落这是普通段落这是普通段落这是普
-            通段落</p>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    &lt;p&gt;这是普通段落这是普通段落这是&lt;b&gt;加强文本&lt;/b&gt;普这是普通段落这是普通段落&lt;/p&gt;
-    </code>
-</pre>
-        </div>
-        <!-- 段落 end-->
+        <!-- 链接 -->
+        <div>${require('./template/link.html')}</div>
 
+        <!-- 按钮 -->
+        <div>${require('./template/button.html')}</div>
 
-        <!-- 链接 start-->
-        <h1 id="link" doc-sidebar class="page-header">链接</h1>
-        <div>
-            <a href="#">这是一条链接</a>
-            <a class="link-spec">这也是一条链接</a>
-            <a class="link-main">Edit </a>
-        </div>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    &lt;a&gt;这是一条链接&lt;/a&gt;
-    &lt;a class="link-spec"&gt;这也是一条链接&lt;/a&gt;
-    &lt;a class="link-main"&gt;Edit&lt;/a&gt;
-    </code>
-</pre>
-        </div>
-        <!-- 链接 end-->
+        <!-- 输入框 -->
+        <div>${require('./template/input.html')}</div>
 
-
-        <!-- 按钮 start-->
-        <h1 id="button" doc-sidebar class="page-header">按钮</h1>
-        <div id="button-content" class="row">
-            <div class="col-12">
-
-                <p>
-                    <a class="btn btn-danger-sm disabled">A Button</a>
-                    <a class="btn btn-danger-sm ">A Button</a>
-                    <a class="btn btn-danger-md disabled">A Button</a>
-                    <a class="btn btn-danger-md ">A Button</a>
-                </p>
-                <p>
-                    <a class="btn btn-warning-sm disabled">A Button</a>
-                    <a class="btn btn-warning-sm ">A Button</a>
-                    <a class="btn btn-warning-md disabled">A Button</a>
-                    <a class="btn btn-warning-md ">A Button</a>
-                </p>
-                <p>
-                </p>
-                <p>
-                    <a class="btn btn-positive-inverse-sm disabled">A Button</a>
-                    <a class="btn btn-positive-inverse-sm ">A Button</a>
-                    <a class="btn btn-positive-inverse-md disabled">A Button</a>
-                    <a class="btn btn-positive-inverse-md ">A Button</a>
-                </p>
-                <p>
-                    <a class="btn btn-positive-sm disabled">A Button</a>
-                    <a class="btn btn-positive-sm">A Button</a>
-                    <a class="btn btn-positive-md disabled">A Button</a>
-                    <a class="btn btn-positive-md">A Button</a>
-                </p>
-                <p>
-                    <a class="btn btn-delete-sm disabled">A Button</a>
-                    <a class="btn btn-delete-sm" >A Button</a>
-                    <a class="btn btn-delete-md disabled">A Button</a>
-                    <a class="btn btn-delete-md">A Button</a>
-                </p>
-                <p>
-                    <a class="btn btn-negative-mdf disabled">取消</a>
-                    <a class="btn btn-negative-mdf">取消</a>
-                    <a class="btn btn-negative-mdf">取消中呢......</a>
-                </p>
-                <p>
-                    <a class="btn btn-positive-mdf disabled">搜索</a>
-                    <a class="btn btn-positive-mdf">搜索</a>
-                    <a class="btn btn-positive-mdf">搜索中呢......</a>
-                </p>
-                <p>
-                    <a class="btn btn-close-mdf disabled">关闭</a>
-                    <a class="btn btn-close-mdf">关闭</a>
-                    <a class="btn btn-close-mdf">关闭中呢......</a>
-                </p>
-                <p>
-                    <button class="btn btn-positive-sm disabled">Button</button>
-                    <button class="btn btn-positive-sm">Button</button>
-                    <button class="btn btn-positive-md disabled">Button</button>
-                    <button class="btn btn-positive-md">Button</button>
-                </p>
-                <p>
-                    <input type="button" class="btn btn-positive-sm disabled" value="Input">
-                    <input type="button" class="btn btn-positive-sm" value="Input">
-                    <input type="button" class="btn btn-positive-md disabled" value="Input">
-                    <input type="button" class="btn btn-positive-md" value="Input">
-                </p>
-            </div>
-        </div>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    &lt;a class="btn btn-danger-sm disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-danger-sm "&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-danger-md disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-danger-md "&gt;A Button&lt;/a&gt;
-
-    &lt;a class="btn btn-warning-sm disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-warning-sm "&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-warning-md disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-warning-md "&gt;A Button&lt;/a&gt;
-
-    &lt;a class="btn btn-positive-inverse-sm disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-inverse-sm "&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-inverse-md disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-inverse-md "&gt;A Button&lt;/a&gt;
-
-    &lt;a class="btn btn-positive-sm disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-sm"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-md disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-positive-md"&gt;A Button&lt;/a&gt;
-
-    &lt;a class="btn btn-delete-sm disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-delete-sm"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-delete-md disabled"&gt;A Button&lt;/a&gt;
-    &lt;a class="btn btn-delete-md"&gt;A Button&lt;/a&gt;
-
-&lt;a class="btn btn-negative-mdf disabled"&gt;取消&lt;/a&gt;
-&lt;a class="btn btn-negative-mdf"&gt;取消&lt;/a&gt;
-&lt;a class="btn btn-negative-mdf"&gt;取消中呢......&lt;/a&gt;
-
-    &lt;a class="btn btn-positive-mdf disabled"&gt;搜索&lt;/a&gt;
-    &lt;a class="btn btn-positive-mdf"&gt;搜索&lt;/a&gt;
-    &lt;a class="btn btn-positive-mdf"&gt;搜索中呢......&lt;/a&gt;
-
-    &lt;a class="btn btn-close-mdf disabled"&gt;关闭&lt;/a&gt;
-    &lt;a class="btn btn-close-mdf"&gt;关闭&lt;/a&gt;
-    &lt;a class="btn btn-close-mdf"&gt;关闭中呢......&lt;/a&gt;
-
-    &lt;button class="btn btn-positive-sm disabled"&gt;Button&lt;/button&gt;
-    &lt;button class="btn btn-positive-sm"&gt;Button&lt;/button&gt;
-    &lt;button class="btn btn-positive-md disabled"&gt;Button&lt;/button&gt;
-    &lt;button class="btn btn-positive-md"&gt;Button&lt;/button&gt;
-
-    &lt;input type="button" class="btn btn-positive-sm disabled" value="Input"&gt;
-    &lt;input type="button" class="btn btn-positive-sm" value="Input"&gt;
-    &lt;input type="button" class="btn btn-positive-md disabled" value="Input"&gt;
-    &lt;input type="button" class="btn btn-positive-md" value="Input"&gt;
-    </code>
-</pre>
-        </div>
-        <!-- 按钮 end-->
-
-
-        <!-- 输入框 start-->
-        <h1 id="input" doc-sidebar class="page-header">输入框</h1>
-        <div class="row">
-            <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-                <input type="text" class="input-standard input-sm" placeholder="28px">
-            </div>
-            <div class="col-3" style="margin-bottom: 20px">
-                <input type="text" class="input-standard" placeholder="32px">
-            </div>
-            <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-                <input type="text" class="input-standard input-lg" placeholder="36px">
-            </div>
-        </div>
-        <div class="row">
-        <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-            <input type="text" class="input-standard input-sm input-webkit" placeholder="28px">
-        </div>
-        <div class="col-3" style="margin-bottom: 20px">
-            <input type="text" class="input-standard input-webkit" placeholder="32px">
-        </div>
-        <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-            <input type="text" class="input-standard input-lg input-webkit" placeholder="36px">
-        </div>
-    </div>
-        <div>
-<pre>
-    <code doc-highlight="html" se-copy>
-    </code>
-</pre>
-        </div>
-        <!-- 输入框 end-->
     </div>
 </doc-page>

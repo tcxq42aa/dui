@@ -39,7 +39,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'raw'
+                loader: 'html?interpolate'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,

@@ -3,12 +3,13 @@
  */
 import {Component, ChangeDetectorRef, ViewChild} from "@angular/core";
 import {SidebarComponent} from "../sidebar/sidebar.component";
+import {AffixDirective} from "../affix/affix.directive";
 require('./document.component.scss');
 @Component({
     moduleId: module.id,
     selector: 'doc-page',
     template: require('./document.component.html'),
-    directives: [SidebarComponent]
+    directives: [SidebarComponent, AffixDirective]
 })
 export class DocumentComponent {
     @ViewChild(SidebarComponent) sidebar:SidebarComponent;

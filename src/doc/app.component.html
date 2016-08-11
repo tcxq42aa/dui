@@ -1,6 +1,5 @@
 <header>
     <div class="container">
-        <div class="row">
         <div class="logo">
             <a href="javascript:;">LUI</a>
         </div>
@@ -8,9 +7,12 @@
             <a href="javascript:;" [routerLink]="['/start']" routerLinkActive="active">起步</a>
             <a href="javascript:;" [routerLink]="['/css']" routerLinkActive="active">全局样式</a>
             <a href="javascript:;" [routerLink]="['/components']" routerLinkActive="active">组件</a>
-            <a href="javascript:;" [routerLink]="['/plugins']" routerLinkActive="active">插件</a>
         </nav>
-        </div>
     </div>
 </header>
 <router-outlet></router-outlet>
+<footer>
+    <div class="container">
+        Powered by 链家 ©2011-2016
+    </div>
+</footer>
