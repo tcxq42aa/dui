@@ -1,0 +1,26 @@
+@import "../utils/variable/variable-all";
+
+.text-main {
+  color: $main-color;
+}
+.text-warning {
+  color: $warn-color;
+}
+.text-danger {
+  color: $danger-color;
+}
+.text-normal {
+  color: $text-body-color;
+}
+.text-label {
+  color: $text-label-color;
+}
+.text-sub-label {
+  color: $text-sub-label-color;
+}
+.text-info {
+  color: $link-color;
+}
+.text-hint {
+  color: $input-placeholder-color;
+}

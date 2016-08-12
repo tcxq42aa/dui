@@ -1,0 +1,45 @@
+@import "../utils/variable/variable-all";
+@import "../utils/mixins/mixin-all";
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &:visited:hover{
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:visited{
+    color: $link-visit-color;
+  }
+}
+
+a.link-main{
+  @include link-type($main-color);
+}
+a.link-spec{
+  @include link-type($link-spec-color);
+}
+
+a.link-nav{
+  color: #767676!important;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: $font-family-sans-serif;
+
+  &:hover, &:visited:hover{
+    color: $main-color!important;
+    text-decoration: none;
+  }
+  
+  &.active{
+    color: $main-color!important;
+    font-weight: 500!important;
+  }
+
+  &:visited{
+    color: $main-color;
+  }
+}

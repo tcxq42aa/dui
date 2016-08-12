@@ -3,10 +3,11 @@
  */
 var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.common.js');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        'core': ["./component/src/core"],
+        'core': ["./src/dui/component/directives"],
     },
     output: {
         filename: "[name].js",
@@ -16,5 +17,6 @@ module.exports = webpackMerge(commonConfig, {
     },
     externals: [
         /^@angular\/.+/
-    ]
+    ],
+    plugins: [new ExtractTextPlugin("[name].css")]
 });

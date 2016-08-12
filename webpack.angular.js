@@ -6,7 +6,7 @@ var commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
     entry: {
-        angular: ["./lib/angular"],
+        angular: ['./src/dui/lib/polyfills.ts','./src/dui/lib/angular.ts'],
     },
     output: {
         filename: "[name].js",

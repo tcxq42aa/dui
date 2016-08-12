@@ -1,0 +1,30 @@
+@import "../utils/variable/variable-all";
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: $headings-margin-top;
+  margin-bottom: $headings-margin-bottom;
+}
+
+
+@each $header, $fontSize in $headings-fontSize {
+  #{$header}, .#{$header}{
+    font-size: $fontSize;
+  }
+}

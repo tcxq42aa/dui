@@ -1,0 +1,45 @@
+@mixin hover {
+  &:hover { @content }
+}
+@mixin focus {
+  &:focus { @content }
+}
+
+@mixin hover-focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin active-focus {
+  &:focus,
+  &:active {
+    @content
+  }
+}
+
+@mixin hover-active {
+  &:focus,
+  &:active {
+    @content
+  }
+}
+
+@mixin hover-active-focus {
+  &:focus,
+  &:hover,
+  &:active{
+    @content
+  }
+}
+@mixin tab-focus() {
+  //// Default
+  //outline: thin dotted;
+  //// WebKit
+  //outline: 5px auto -webkit-focus-ring-color;
+  //outline-offset: -2px;
+
+  outline: none;
+}
+

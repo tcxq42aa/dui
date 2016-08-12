@@ -1,0 +1,16 @@
+<div class="summary">
+    <div class="container">
+        <ng-content select=".p-header"></ng-content>
+    </div>
+</div>
+
+<div class="container" style="min-height: 500px;">
+    <div class="row">
+        <div class="col-9">
+            <ng-content select=".p-content"></ng-content>
+        </div>
+        <div class="col-3">
+            <doc-sidebar doc-affix [data]="data"></doc-sidebar>
+        </div>
+    </div>
+</div>

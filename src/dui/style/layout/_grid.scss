@@ -1,0 +1,51 @@
+@import "../utils/mixins/mixin-all";
+
+//容器
+.container{
+  @include make-container();
+}
+
+//栅格行
+.row {
+  @include make-row();
+
+  //设置子项上下对齐方式
+  //默认为: stretch;
+  &.row-top    { align-items: flex-start; }
+  &.row-center { align-items: center; }
+  &.row-bottom { align-items: flex-end; }
+
+  //设置子项左右对齐方式
+  //默认为: flex-start;
+  &.row-left    { justify-content: flex-start; }
+  &.row-right { justify-content: flex-end; }
+  &.row-between { justify-content: space-between;}
+  &.row-around { justify-content: space-around;}
+}
+
+//栅格列
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: $i / $grid-columns * 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+
+    //单独设置子项上下对齐方式
+    &.col-top    { align-self: flex-start; }
+    &.col-center { align-self: center; }
+    &.col-bottom { align-self: flex-end; }
+  }
+
+  .expend-#{$i} {
+    flex-grow: $i;
+  }
+}
+@for $i from 1 through $grid-columns {
+
+  .col-offset-#{$i} {
+    @include make-col-offset($i);
+  }
+}
+

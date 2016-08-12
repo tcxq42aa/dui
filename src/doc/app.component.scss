@@ -1,0 +1,54 @@
+@import "../dui/style/utils/mixins/mixin-all";
+@import "../dui/style/utils/variable/variable-all";
+
+header {
+    color: $main-color;
+    @include clearfix;
+    .logo {
+        font-size: 2rem;
+    }
+    .logo, .nav {
+        float: left;
+        margin-right: 30px;
+    }
+    .nav-right {
+        float: right;
+    }
+    .nav, .nav-right {
+        a {
+            font-size: 1.2rem;
+            float: left;
+            padding: 0 20px;
+            -webkit-transition: background-color .15s linear;
+            -moz-transition: background-color .15s linear;
+            -ms-transition: background-color .15s linear;
+            -o-transition: background-color .15s linear;
+            transition: background-color .15s linear;
+            &:hover,&.active {
+                background-color: lighten($main-color, 50%);
+            }
+        }
+        @include clearfix;
+    }
+    a {
+        text-decoration: none;
+        color: $main-color;
+        height: 46px;
+        line-height: 46px;
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover, &:visited {
+            color: $main-color!important;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    color: #999;
+    font-size: 0.8rem;
+    background-color: #333;
+}

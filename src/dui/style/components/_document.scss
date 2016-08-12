@@ -1,0 +1,31 @@
+@import "../utils/variable/variable-all";
+
+html {
+  font-size: $font-size-root;
+  font-family: $font-family-base;
+  line-height: $line-height;
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+/*正文颜色*/
+p, .text-body{
+  color: $text-body-color;
+}
+
+label{
+  color: $text-label-color;
+}
+/*input-placeholder颜色*/
+input::-webkit-input-placeholder{
+  color:$input-placeholder-color;
+}
+
+:focus{
+  outline: none;
+}
+
+b{
+  margin: 0 3px;
+}
