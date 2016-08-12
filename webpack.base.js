@@ -28,7 +28,8 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
-        contentBase: './dist/doc'
+        contentBase: './dist/doc',
+        port: 8080
     },
 
     module: {
@@ -39,7 +40,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html?interpolate'
+                loader: 'html?interpolate&minimize=false'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
