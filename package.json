@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.dev.js --hot --inline --progress --colors",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings",
+    "typings": "typings install",
     "build:doc": "rimraf ./dist/doc && webpack --config ./webpack.prod.js --progress --colors",
     "build:angular": "rimraf ./dist/lib && NODE_ENV=prod webpack --config ./webpack.angular.js --progress --colors",
     "build:component": "rimraf ./dist/component && NODE_ENV=prod webpack --config ./webpack.component.js --progress --colors",
