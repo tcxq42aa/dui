@@ -7,9 +7,8 @@ import {SidebarDirective} from "../../component/sidebar/sidebar.directive";
 import {DocumentComponent} from "../../component/document/document.component";
 require('./components.component.scss');
 @Component({
-    moduleId: module.id,
     selector: 'page-components',
-    template: require('./components.component.html'),
+    templateUrl: 'components.component.html',
     directives: [DocumentComponent, SidebarDirective]
 })
 export class ComponentsComponent extends BaseComponent{

@@ -5,9 +5,8 @@ import {Component, ChangeDetectorRef, Input, ChangeDetectionStrategy} from "@ang
 import {SCROLLSPY_DIRECTIVE} from "../scrollspy/scrollspy.directive";
 require("./sidebar.component.scss");
 @Component({
-    moduleId: module.id,
     selector: 'doc-sidebar',
-    template: require('./sidebar.component.html'),
+    templateUrl: 'sidebar.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [SCROLLSPY_DIRECTIVE]
 })
