@@ -1,22 +1,20 @@
 $tip_default_bg_color: #3e3e3e;
 $tip_default_text_color: #fff;
-$tip_pos_offset: -12px;
-$tip_margin_offset: -6px;
 
 $tip_type: top topLeft topRight right rightTop rightBottom bottom bottomLeft bottomRight left leftTop leftBottom;
 $tip_type_map: (
-        top: top left 50% bottom left,
-        topLeft: top left 8px bottom left,
-        topRight: top right 8px bottom left,
-        right: right top 50% left top,
-        rightTop: right top 8px left top,
-        rightBottom: right bottom 8px left top,
-        bottom: bottom left 50% top left,
-        bottomLeft: bottom left 8px top left,
-        bottomRight: bottom right 8px top left,
-        left: left top 50% right top,
-        leftTop: left top 8px right top,
-        leftBottom: left bottom 8px right top,
+        top: top translate3d(-50%, 100%, 0),
+        topLeft: top translate3d(-50%, 100%, 0),
+        topRight: top translate3d(50%, 100%, 0),
+        right: right translate3d(-100%, -50%, 0),
+        rightTop: right translate3d(-100%, -50%, 0),
+        rightBottom: right translate3d(-100%, 50%, 0),
+        bottom: bottom translate3d(-50%, -100%, 0),
+        bottomLeft: bottom translate3d(-50%, -100%, 0),
+        bottomRight: bottom translate3d(50%, -100%, 0),
+        left: left translate3d(100%, -50%, 0),
+        leftTop: left translate3d(100%, -50%, 0),
+        leftBottom: left translate3d(100%, 50%, 0)
 );
 
 @mixin apply_theme($name, $background, $color){
@@ -31,29 +29,37 @@ $tip_type_map: (
     flex-direction: column;
     @each $type in $tip_type {
       $param: map_get($tip_type_map, $type);
-      &.#{$type}:before {
+      &.#{$type} > .arrow {
         z-index: 1000;
         display: block;
         content: ' ';
         position: absolute;
         border: 7px solid transparent;
-        border-#{nth($param, 1)}-color: $background;
+        border-#{nth($param, 1)}-color: #c0c0c0;
         border-#{nth($param, 1)}-width: 5px;
-        @if unit(nth($param, 3))=='px'{
-          #{nth($param, 2)}: nth($param, 3) + 15;
-        } @else {
-          #{nth($param, 2)}: nth($param, 3);
-        }
-        #{nth($param, 4)}: $tip_pos_offset;
-        margin-#{nth($param, 5)}: $tip_margin_offset;
       }
-      &.#{$type}:after {
-        @if unit(nth($param, 3))=='px'{
-          #{nth($param, 2)}: nth($param, 3) + 15;
-        } @else {
-          #{nth($param, 2)}: nth($param, 3);
+      &.#{$type} > .arrow:after {
+        z-index: 1000;
+        display: block;
+        content: ' ';
+        position: absolute;
+        border: 7px solid transparent;
+        border-#{nth($param, 1)}-color: #fff;
+        border-#{nth($param, 1)}-width: 5px;
+        @if(nth($param, 1) == 'top') {
+          left: -7px;
+          top: -6px;
+        }@else if(nth($param, 1) == 'bottom') {
+          left: -7px;
+          top: -6px;
+        }@else if(nth($param, 1) == 'left') {
+          left: -6px;
+          top: -7px;
+        }@else if(nth($param, 1) == 'right') {
+          left: -6px;
+          top: -7px;
         }
-        #{nth($param, 4)}: $tip_pos_offset - 1;
+
       }
     }
     & .tip-title {
@@ -83,26 +89,23 @@ $tip_type_map: (
   background: $tip_default_bg_color;
   border-radius: 2px;
   padding: .5rem 2.5rem;
-  white-space: nowrap;
+  max-width: 300px;
   line-height: 1;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
 
-  &:after {
+  & > .arrow {
     z-index: 999;
     display: block;
-    content: ' ';
     position: absolute;
     border: 7px solid transparent;
   }
 
   @each $type in $tip_type {
-    &.#{$type}:after {
+    &.#{$type} > .arrow {
       $param: map_get($tip_type_map, $type);
       border-#{nth($param, 1)}-color: inherit;
       border-#{nth($param, 1)}-width: 5px;
-      #{nth($param, 2)}: nth($param, 3);
-      #{nth($param, 4)}: $tip_pos_offset;
-      margin-#{nth($param, 5)}: $tip_margin_offset;
+      transform: nth($param, 2);
     }
   }
 

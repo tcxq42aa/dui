@@ -3,7 +3,9 @@
         <div #child class="tips"
              *ngIf="visible"
              [ngClass]="direction"
-             [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}" [innerHTML]="trustedContent">
+             [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}">
+            <i class="arrow" [ngStyle]="{top: this.arrowTop,right: this.arrowRight,bottom: this.arrowBottom,left: this.arrowLeft}"></i>
+            <div [innerHtml]="trustedTitle"></div>
         </div>
     </template>
     <template [ngIf]="theme">
@@ -11,11 +13,12 @@
              *ngIf="visible"
              [ngClass]="[direction, theme].join(' ')"
              [ngStyle]="{'left': _left + 'px', 'top': _top + 'px'}">
-            <div class="tip-title">title</div>
-            <div class="tip-content">内容</div>
+            <i class="arrow" [ngStyle]="{top: this.arrowTop,right: this.arrowRight,bottom: this.arrowBottom,left: this.arrowLeft}"></i>
+            <i class="arrow-bg" [ngStyle]="{top: this.arrowTop,right: this.arrowRight,bottom: this.arrowBottom,left: this.arrowLeft}"></i>
+            <div class="tip-title" [innerHtml]="trustedTitle"></div>
+            <div class="tip-content" [innerHtml]="trustedContent"></div>
             <div class="tip-action">
-                <a class="link-spec">关闭</a>
-                <a class="link-main">确定</a>
+                <a class="link-main" (click)="hide($event)">确定</a>
             </div>
         </div>
     </template>
