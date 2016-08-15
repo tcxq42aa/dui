@@ -8,9 +8,11 @@ import {routing} from "./app.routes";
 import {AppComponent} from "./app.component";
 import {APP_BASE_HREF} from "@angular/common";
 import {DUI_DIRECTIVES} from "../dui/component/directives";
+import {SidebarComponent} from "./component/sidebar/sidebar.component";
+import {SidebarDirective} from "./component/sidebar/sidebar.directive";
 @NgModule({
     imports: [BrowserModule, FormsModule, routing],
-    declarations: [AppComponent, ...DUI_DIRECTIVES],
+    declarations: [AppComponent, SidebarComponent, SidebarDirective, ...DUI_DIRECTIVES],
     bootstrap: [AppComponent],
     providers: [
         {provide: APP_BASE_HREF, useValue: '/'}
