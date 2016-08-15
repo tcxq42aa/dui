@@ -8,3 +8,10 @@ $input-box-shadow-focus:         rgba(102,175,233,.6) !default;
     @include box-shadow($shadow);
   }
 }
+
+// input["text"] size
+@mixin input-text-size($size) {
+  $input-text-size: map_get($input-text-size, $size);
+
+  padding: nth($input-text-size, 1) nth($input-text-size, 2);
+}

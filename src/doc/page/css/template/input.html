@@ -1,29 +1,149 @@
 <h1 id="input-standard" doc-sidebar class="page-header">输入框</h1>
+
 <div class="row">
-    <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-        <input type="text" class="input-standard input-sm" placeholder="28px">
-    </div>
-    <div class="col-3" style="margin-bottom: 20px">
-        <input type="text" class="input-standard" placeholder="32px">
-    </div>
-    <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-        <input type="text" class="input-standard input-lg" placeholder="36px">
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-        <input type="text" class="input-standard input-sm input-webkit" placeholder="28px">
-    </div>
-    <div class="col-3" style="margin-bottom: 20px">
-        <input type="text" class="input-standard input-webkit" placeholder="32px">
-    </div>
-    <div class="col-3 col-offset-1" style="margin-bottom: 20px">
-        <input type="text" class="input-standard input-lg input-webkit" placeholder="36px">
+    <div class="col-12" style="padding:20px">
+        <input type="text" placeholder="default 28px">
+        <input type="text" class="input-small-md" placeholder="160px 28px">
+        <input type="text" class="input-standard-md" placeholder="260px 28px">
+        <input type="text" class="input-standard-md input-webkit-like" placeholder="260px 28px">
     </div>
 </div>
 <div>
 <pre>
     <code doc-highlight="html" se-copy>
+    &lt;input type="text" placeholder="default 28px"&gt;
+    &lt;input type="text" class="input-small-md" placeholder="160px 28px"&gt;
+    &lt;input type="text" class="input-standard-md" placeholder="260px 28px"&gt;
+    &lt;input type="text" class="input-standard-md input-webkit-like" placeholder="260px 28px"&gt;
+    </code>
+</pre>
+</div>
+
+<div class="row">
+    <div class="col-12" style="padding:20px">
+        <input type="text" class="input-small-lg" placeholder="160px 32px">
+        <input type="text" class="input-standard-lg" placeholder="260px 32px">
+        <input type="text" class="input-standard-lg input-webkit-like" placeholder="260px 32px">
+    </div>
+</div>
+<div>
+<pre>
+    <code doc-highlight="html" se-copy>
+    &lt;input type="text" class="input-small-lg" placeholder="160px 32px"&gt;
+    &lt;input type="text" class="input-standard-lg" placeholder="260px 32px"&gt;
+    &lt;input type="text" class="input-standard-lg input-webkit-like" placeholder="260px 32px"&gt;
+    </code>
+</pre>
+</div>
+<div class="row">
+    <div class="col-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-sm" placeholder="260px 24px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-md" placeholder="260px 28px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-lg" placeholder="260px 32px ">
+            </div>
+        </form>
+    </div>
+    <div class="col-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-small-sm" placeholder="160px 24px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-small-md" placeholder="160px 28px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-small-lg" placeholder="160px 32px ">
+            </div>
+        </form>
+    </div>
+    <div class="col-12">
+        <form class="form-block">
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-sm" placeholder="260px 24px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-md" placeholder="260px 28px">
+            </div>
+            <div class="form-group">
+                <label class="control-label">字段标题:</label>
+                <input type="text" class="input-standard-lg" placeholder="260px 32px ">
+            </div>
+        </form>
+    </div>
+</div>
+<pre>
+    <code doc-highlight="html" se-copy>
+        &lt;input type="text" placeholder="default 28px"&gt;
+
+        &lt;input type="text" class="input-standard-sm" placeholder="260px 24px"&gt;
+        &lt;input type="text" class="input-standard-md" placeholder="260px 28px"&gt;
+        &lt;input type="text" class="input-standard-lg" placeholder="260px 32px"&gt;
+
+        &lt;input type="text" class="input-small-sm" placeholder="160px 24px"&gt;
+        &lt;input type="text" class="input-small-md" placeholder="160px 28px"&gt;
+        &lt;input type="text" class="input-small-lg" placeholder="160px 32px"&gt;
+
+        &lt;input type="text" class="input-small-sm input-webkit-like" placeholder="160px 24px"&gt;
+        &lt;input type="text" class="input-small-md input-webkit-like" placeholder="160px 28px"&gt;
+        &lt;input type="text" class="input-small-lg input-webkit-like" placeholder="160px 32px"&gt;
+    </code>
+</pre>
+<div class="row">
+    <div class="col-12" style="margin-bottom: 20px">
+        <input type="text"  style="font-size: 14px"  placeholder="default 32px">
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" style="margin-bottom: 20px">
+        <input type="text"   style="font-size: 14px" class="input-standard-sm" placeholder="260px 28px">
+        <input type="text"   style="font-size: 14px" class="input-standard-md" placeholder="260px 32px">
+        <input type="text"   style="font-size: 14px" class="input-standard-lg" placeholder="260px 36px">
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" style="margin-bottom: 20px">
+        <input type="text"   style="font-size: 14px" class="input-small-sm" placeholder="160px 28px">
+        <input type="text"   style="font-size: 14px" class="input-small-md" placeholder="160px 32px">
+        <input type="text"   style="font-size: 14px" class="input-small-lg" placeholder="160px 36px ">
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" style="margin-bottom: 20px">
+        <input type="text"   style="font-size: 14px" class="input-small-sm  input-webkit-like" placeholder="160px 28px">
+        <input type="text"   style="font-size: 14px" class="input-small-md  input-webkit-like" placeholder="160px 32px">
+        <input type="text"   style="font-size: 14px" class="input-small-lg  input-webkit-like" placeholder="160px 36px ">
+    </div>
+</div>
+<div>
+<pre>
+    <code doc-highlight="html" se-copy>
+        &lt;input type="text"  style="font-size: 14px" placeholder="default 32px"&gt;
+
+        &lt;input type="text"  style="font-size: 14px"  class="input-standard-sm" placeholder="260px 28px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-standard-md" placeholder="260px 32px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-standard-lg" placeholder="260px 36px"&gt;
+
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-sm" placeholder="160px 28px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-md" placeholder="160px 32px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-lg" placeholder="160px 36px"&gt;
+
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-sm input-webkit-like" placeholder="160px 28px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-md input-webkit-like" placeholder="160px 32px"&gt;
+        &lt;input type="text"  style="font-size: 14px"  class="input-small-lg input-webkit-like" placeholder="160px 36px"&gt;
     </code>
 </pre>
 </div>

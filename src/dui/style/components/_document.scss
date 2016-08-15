@@ -15,6 +15,11 @@ p, .text-body{
 }
 
 label{
+  display: inline-block;
+  /*line-height * font-size 必需得为偶数才能保证居中*/
+  font-size: 12px;
+  line-height: 1;
+  vertical-align: middle;
   color: $text-label-color;
 }
 /*input-placeholder颜色*/

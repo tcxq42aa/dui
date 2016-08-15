@@ -68,10 +68,10 @@ $btn-font-weight:                normal !default;
 //按钮尺寸
 $btn-type: sm md mdf lg !default;
 $btn-size:(
-        sm: .334rem .834rem 5rem,
-        md: .75rem 1rem 8rem,
-        mdf: .75rem 1rem 5.334rem,
-        lg: .6rem 1rem 8rem
+  sm: .334rem .834rem 5rem,
+  md: .75rem 1rem 8rem,
+  mdf: .75rem 1rem 5.334rem,
+  lg: .6rem 1rem 8rem
 );
 //----------------按钮 end--------------------
 
@@ -81,9 +81,18 @@ $cursor-disabled:  not-allowed !default;
 
 //----------------表单------------------------
 $input-color: $text-body-color !default;
+$input-line-height: 1.5 !default;
 $input-border-radius: 2px;
 $input-box-shadow-light: inset 0 1px 3px 0 rgba(0,0,0,.1) !default;
 $input-box-shadow-heavy: inset 0 1px 3px 0 rgba(0,0,0,.1) !default;
+
+//input["text"]尺寸
+$input-type: sm md lg !default;
+$input-text-size:(
+  sm: 2px 7px,
+  md: 4px 7px,
+  lg: 6px 7px
+);
 //----------------表单 end--------------------
 
 

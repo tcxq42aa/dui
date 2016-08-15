@@ -1,22 +1,19 @@
-
-
-.input-standard {
-  display: block;
-  width: 100%;
-  padding: 6px 10px;
+[type="text"] {
   font-size: 12px;
-  line-height: $line-height;
+  line-height: $input-line-height;
   color: $input-color;
   background-color: #fff;
-  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   border: 1px solid $input-border-color;
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  vertical-align: middle;
+
+  //默认size
+  @include input-text-size('md');
+
   @include border-radius($input-border-radius);
   @include box-shadow(none);
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-
-  @include focus{
+  @include focus {
     @include box-shadow($input-box-shadow-light);
   }
 
@@ -26,16 +23,26 @@
   }
 }
 
-// sizing
-.input-sm {
-   padding: 4px 10px;
- }
+@each $size in $input-type {
 
-.input-lg {
-  padding: 8px 10px;
+  /* 正向 */
+  .input-standard-#{$size} {
+    width: 260px;
+    @include input-text-size($size);
+  }
+  .input-small-#{$size} {
+    width: 160px;
+    @include input-text-size($size);
+  }
+  /* 正向 */
+  .input-block-#{$size} {
+    display: block;
+    width: 100%;
+    @include input-text-size($size);
+  }
 }
 
-.input-webkit{
+.input-webkit-like{
   // Customize the `:focus` state to imitate native WebKit styles.
   @include input-standard-focus();
 
@@ -80,4 +87,50 @@
   }
   white-space: nowrap;
   vertical-align: middle; // Match the inputs
+}
+
+label, .control-label{
+  display: inline-block;
+  /*line-height * font-size 必需得为偶数才能保证居中*/
+  font-size: 12px;
+  line-height: 1;
+  vertical-align: middle;
+  color: $text-label-color;
+}
+
+$form-group-margin-bottom: 15px;
+
+.form-inline {
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 30px;
+    vertical-align: middle;
+  }
+  .control-label{
+    margin-right: 16px;
+  }
+}
+
+
+.form-block {
+  .form-group {
+    margin-bottom: 30px;
+
+    > [type="text"] {
+      display: block;
+    }
+    //> .input-full {
+    //  display: block;
+    //  width: 100%;
+    //}
+  }
+  .control-label{
+    margin-bottom: 7px;
+  }
+}
+
+.form-group{
+  font-size: 0;
+  margin-bottom: $form-group-margin-bottom;
 }
