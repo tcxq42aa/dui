@@ -1,7 +1,6 @@
 @import "../dui/style/utils/variable/variable-all";
-body {
+html {
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
 }
 pre {
   position: relative;
@@ -19,6 +18,7 @@ pre {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
+  font-size: 1.2rem;
   & p {
     color: #fff;
   }
@@ -30,7 +30,6 @@ pre {
 }
 .page-content {
   line-height: 1.8;
-  //font-size: 1rem;
 }
 .seg {
   display: block;

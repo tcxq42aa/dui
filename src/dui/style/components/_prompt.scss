@@ -1,0 +1,24 @@
+@import "../utils/variable/variable-all";
+
+@mixin bg-variant($color) {
+  color: $color;
+  background-color: transparentize($color, .8);
+}
+
+.bg-danger, .bg-warning, .bg-success {
+  padding: .8rem 3.8rem;
+  line-height: 1;
+  margin: .8rem 0;
+}
+
+.bg-danger {
+  @include bg-variant($danger-color);
+}
+
+.bg-warning {
+  @include bg-variant($warn-color);
+}
+
+.bg-success {
+  @include bg-variant($main-color);
+}

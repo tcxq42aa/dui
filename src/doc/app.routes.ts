@@ -1,12 +1,12 @@
 /**
  * Created by charles on 16/8/3.
  */
-import { provideRouter, RouterConfig }  from '@angular/router';
+import {Routes, RouterModule }  from '@angular/router';
 import {StartComponent} from "./page/start/start.component";
 import {CssComponent} from "./page/css/css.component";
 import {ComponentsComponent} from "./page/components/components.component";
 
-const routes: RouterConfig = [
+const appRoutes: Routes = [
     {
         path: 'start',
         component: StartComponent
@@ -26,6 +26,4 @@ const routes: RouterConfig = [
     }
 ];
 
-export const appRouterProviders = [
-    provideRouter(routes)
-];
+export const routing = RouterModule.forRoot(appRoutes);

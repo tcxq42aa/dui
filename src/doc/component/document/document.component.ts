@@ -6,9 +6,8 @@ import {SidebarComponent} from "../sidebar/sidebar.component";
 import {AffixDirective} from "../affix/affix.directive";
 require('./document.component.scss');
 @Component({
-    moduleId: module.id,
     selector: 'doc-page',
-    template: require('./document.component.html'),
+    templateUrl: 'document.component.html',
     directives: [SidebarComponent, AffixDirective]
 })
 export class DocumentComponent {

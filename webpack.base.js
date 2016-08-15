@@ -5,6 +5,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var path = require('path');
 
 module.exports = {
     entry: {
@@ -28,7 +30,8 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
-        contentBase: './dist/doc'
+        contentBase: './dist/doc',
+        port: 8080
     },
 
     module: {
@@ -39,7 +42,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html?interpolate'
+                loader: 'html?interpolate&minimize=false'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -61,6 +64,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/doc/index.html',
             favicon: './src/dui/images/favicon.ico'
-        })
+        }),
+        new CopyWebpackPlugin([
+            // {output}/file.txt
+            { from: './src/doc/server.js' },
+            { from: './src/doc/package.json' }
+
+            // {output}/to/file.txt
+            // { from: 'from/file.txt', to: 'to/file.txt' }
+        ])
     ]
 };
