@@ -6,7 +6,7 @@
 }
 
 //栅格行
-.row {
+.row, .form-flex-1, .form-flex-2, .form-flex-3, .form-flex-4{
   @include make-row();
 
   //设置子项上下对齐方式
